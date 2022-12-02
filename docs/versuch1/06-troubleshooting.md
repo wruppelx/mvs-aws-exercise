@@ -1,0 +1,7 @@
+# Troubleshooting
+
+## Elemental MediaConvert darf nicht auf den S3 Bucket zugreifen (Access denied)
+
+Wenn Elemental MediaConvert nicht die erforderlichen Rechte besitzt, um auf den S3 Objektspeicher zuzugreifen wird der Transkodier-Auftrag mit einer Fehlermeldung beendet.
+
+Hier lohnt es sich zu kontrollieren, dass beim Transkodierauftrag "Verwenden einer vorhandenen Servicerolle" im Bereich "AWS-Integration" gewählt wurde und die bereits bestehende Rolle "MediaConvert_Default_Role" ausgewählt wurde.

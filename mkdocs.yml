@@ -1,0 +1,48 @@
+site_name: Video-on-Demand (AWS/Akamai)
+site_url: https://wruppelx.github.io/mvs-aws-exercise
+repo_url: https://github.com/wruppelx/mvs-aws-exercise
+edit_uri: ""
+theme:
+  name: material
+  language: de
+  features:
+    - toc.integrate
+    - navigation.top
+    #- navigation.expand
+  logo: assets/logo_hsrm_weiss.svg
+  favicon: assets/favicon.png
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Umschalten zu Lightmode
+      primary: red
+      accent: red
+
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Umschalten zu Darkmode
+      primary: red
+      accent: red
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search:
+      lang: de
+
+nav:
+  - Übersicht: index.md
+  - Vorbereitung: vorbereitung.md
+  - Versuch 1:
+    - Einführung Versuch 1: versuch1/01-einfuehrung.md
+    - AWS S3: versuch1/02-S3.md
+    - AWS MediaConvert: versuch1/03-transkoder.md
+    - Download: versuch1/04-download.md
+    - Fazit: versuch1/05-fazit.md
+    - Troubleshooting: versuch1/06-troubleshooting.md
