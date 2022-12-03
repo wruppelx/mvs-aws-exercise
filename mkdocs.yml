@@ -35,6 +35,7 @@ markdown_extensions:
 plugins:
   - search:
       lang: de
+  - alternate-link
 
 nav:
   - Übersicht: index.md
