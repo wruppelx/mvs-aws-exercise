@@ -1,6 +1,6 @@
 site_name: Video-on-Demand (AWS/Akamai)
-site_url: https://wruppelx.github.io/mvs-aws-exercise
-repo_url: https://github.com/wruppelx/mvs-aws-exercise
+site_url: https://wruppelx.github.io/mvs-aws-exercise/
+repo_url: https://github.com/wruppelx/mvs-aws-exercise/
 edit_uri: ""
 theme:
   name: material
