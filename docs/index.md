@@ -2,7 +2,7 @@
 
 ## Kurzfassung
 
-In dieser praktischen Übung zum Thema Cloud-Transkodierung soll ein grundlegendes Verständnis für Cloudbasierte Transkodierung für Video-on-Demand-Systeme geschaffen werden. Außerdem sollen erste Praxiserfahrungen mit den Cloud-Anbietern AWS und Akamai vermittelt werden.
+In dieser praktischen Übung zum Thema Cloud-Transcodierung soll ein grundlegendes Verständnis für cloudbasierte Transcodierung für Video-on-Demand-Systeme geschaffen werden. Außerdem sollen erste Praxiserfahrungen mit den Cloud-Anbietern AWS und Akamai vermittelt werden.
 
 ## Einleitung
 
@@ -10,14 +10,14 @@ Video-on-Demand-Systeme (VoD) sind aus dem alltäglichen Leben nicht wegzudenken
 
 ## Workflow
 
-Grundsätzlich folgt der Distributionsweg bei VoD-Systemen meist einem ähnlichen Ablauf. Mediendateien werden in hoher Qualität in das System eingespeist und nicht öffentlich gespeichert. Je nach Distributionsweg kann die Rohdatei in verschiedene Distributionsformate transkodiert werden, um auf verschiedenen Geräten wiedergegeben werden zu können. Die transkodierten Dateien können außerdem noch mit einem Kopierschutz versehen werden.
+Grundsätzlich folgt der Distributionsweg bei VoD-Systemen meist einem ähnlichen Ablauf. Mediendateien werden in hoher Qualität in das System eingespeist und nicht öffentlich gespeichert. Je nach Distributionsweg kann die Quelldatei in verschiedene Distributionsformate transcodiert werden, um auf verschiedenen Geräten wiedergegeben werden zu können. Die transcodierten Dateien können außerdem noch mit einem Kopierschutz versehen werden.
 
 Sind die verschiedenen Distributionspakete erstellt, können sie über ein Content-Delivery-Network (CDN) verteilt werden. Nutzer greifen dabei über eine Weboberfläche (Frontend) auf die im CDN gespeicherten Medien (Backend) zu.
 
 ![Cloud Transkoder Workflow](assets/diagrams/workflow.svg#only-light){ style="width:100%" }
 ![Cloud Transkoder Workflow](assets/diagrams/workflow_dark.svg#only-dark){ style="width:100%" }
 
-In der Praxis wird dieser simple Ablauf noch mit verschiedenen Steuerungs- und Monitoriung-Werkzeugen ergänzt, um Arbeitsschritte zu automatisieren oder bspw. dem zuständigen Mitarbeiter Benachrichtigungen zu senden, sobald eine Datei transkodiert wurde.
+In der Praxis wird dieser simple Ablauf noch mit verschiedenen Steuerungs- und Monitoriung-Werkzeugen ergänzt, um Arbeitsschritte zu automatisieren oder bspw. dem zuständigen Mitarbeiter Benachrichtigungen zu senden, sobald eine Datei transcodiert wurde.
 
 ## Cloud-Anbieter
 
@@ -25,12 +25,12 @@ In der Praxis wird dieser simple Ablauf noch mit verschiedenen Steuerungs- und M
 
 Cloud-Anbieter sind Firmen, die Rechenleistung oder ähnliche Dienstleistungen für ihre Kunden anbieten. Der Nutzer muss keine eigene Hardware bereitstellen, sondern mietet diese für einen gewissen Zeitraum an. Bei Bedarf kann so flexibel und für einen kurzen Zeitraum mehr oder weniger Ressourcen gebucht werden.
 
-Das Angebot kann man grob in 3 Bereiche unterteilen: *"Infrastructure as a Service (IaaS)"* stellt Computing- oder Netzwerk-Infrastruktur, wie Server und Router zur Verfügung. *"Platform as a Service (PaaS)"* bietet Platformen wie Speicherplatz oder Kubernetes-Cluster an, ohne, dass sich der Kunde mit dem darunterliegenden Betriebssystem befassen muss. *"Software as a Service (SaaS)"* abstrahiert weiter und stellt reine Softwarelösungen, wie Transkoder oder Benachrichtigungen zur Verfügung.
+Das Angebot kann man grob in 3 Bereiche unterteilen: *"Infrastructure as a Service (IaaS)"* stellt Computing- oder Netzwerk-Infrastruktur wie Server und Router zur Verfügung. *"Platform as a Service (PaaS)"* bietet Plattformen wie Speicherplatz oder Kubernetes-Cluster an, ohne dass sich der Kunde mit dem darunterliegenden Betriebssystem befassen muss. *"Software as a Service (SaaS)"* abstrahiert weiter und stellt reine Softwarelösungen wie Transcoder oder Benachrichtigungen zur Verfügung.
 
 Einige Cloud-Anbieter sind *AWS*, *Microsoft Azure*, *Akamai* oder *Linode*.
 
 !!! info
-    Für die folgenden Versuche werden die Platformen von **AWS** für Speicherung, Monitoring und Transkodierung sowie das Content-Delivery-Network von **Akamai** benutzt.
+    Für die folgenden Versuche werden die Plattformen von **AWS** für Speicherung, Monitoring und Transcodierung sowie das Content-Delivery-Network von **Akamai** benutzt.
 
 !!! danger "Kosten"
 
@@ -38,7 +38,7 @@ Einige Cloud-Anbieter sind *AWS*, *Microsoft Azure*, *Akamai* oder *Linode*.
 
 ### Weboberfläche
 
-Cloud-Produkte lassen sich am Einfachsten über eine grafische Weboberfläche einrichten und bedienen. Diese bietet die übersichtliste Bedienung, ist jedoch weniger leicht zu automatisieren. Mithilfe der Login-Daten können mit wenigen Klicks Ressourcen hinzugefügt oder entfernt werden. Die Weboberfläche nennt sich bei AWS *"Konsole"*.
+Cloud-Produkte lassen sich am einfachsten über eine grafische Weboberfläche einrichten und bedienen. Diese bietet die übersichtliche Bedienung, ist jedoch weniger leicht zu automatisieren. Mithilfe der Log-in-Daten können mit wenigen Klicks Ressourcen hinzugefügt oder entfernt werden. Die Weboberfläche nennt sich bei AWS *"Konsole"*.
 
 ### Kommandozeile
 
@@ -48,6 +48,6 @@ Neben der grafischen Oberfläche können Cloud-Ressourcen auch mithilfe von Komm
 
 | Nr.                                                           | Beschreibung
 | ------------------------------------------------------------- | --------------------------------------------------------------- |
-| [Versuch 1](./versuch1/01-einfuehrung)                         | Behandelt die grundlegenden Konzepte eines **Cloud-Transkoders**|
+| [Versuch 1](./versuch1/01-einfuehrung)                        | Behandelt die grundlegenden Konzepte eines **Cloud-Transkoders**|
 | [Versuch 2](https://youtu.be/dQw4w9WgXcQ)                     | Behandelt die grundlegenden Konzepte eines **CDNs**             |
 | [Versuch 3](https://youtu.be/dQw4w9WgXcQ)                     | Aufbau eines VOD-Systems via der **Web-GUI**                    |

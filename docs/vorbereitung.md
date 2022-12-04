@@ -2,7 +2,7 @@
 
 ## Abgabe
 
-Bewertet wird ein schriftlicher Versuchsbericht, sowie die erstellten Ressourcen und Transkodier-Aufträge in AWS / Akamai. Der schriftliche Bericht muss **mindestens 4 Seiten** umfassen und die in der Versuchsanleitung gestellten Fragen beantworten. Die Fragen sind folgendermaßen gekennzeichnet:
+Bewertet wird ein schriftlicher Versuchsbericht sowie die erstellten Ressourcen und Transcodier-Aufträge in AWS / Akamai. Der schriftliche Bericht muss **mindestens 4 Seiten** umfassen und die in der Versuchsanleitung gestellten Fragen beantworten. Die Fragen sind folgendermaßen gekennzeichnet:
 
 !!! question "Frage n"
     Fragestellung.
