@@ -13,9 +13,9 @@ Als Objektspeicher wird für diesen Versuch *AWS S3* verwendet. Einzelne Objekte
 !!! warning "Kosten"
     Gespeicherte Dateien verursachen sowohl pro Zeiteinheit Speicherkosten, als auch pro übertragene Gigabyte Downloadkosten. Bei kleinen Datenmengen, wie in diesem Versuch, belaufen sich die Kosten auf unter 1$ USD. Bei großen Projekten und Datenmengen können die Speicherkosten jedoch deutlich größer sein.
 
-### Transkodierer (*AWS Elemental MediaConvert*)
+### Transcodierer (*AWS Elemental MediaConvert*)
 
-![AWS Elemental Mediaconvert Logo](../assets/versuch1/aws_elemental_mediaconvert.svg){ align=left style="height:125px;width:125px;margin-top:0" } Als *Software-as-a-Service* Lösung bieten Cloud-Transkoder für verschiedenste Einsatzzwecke Transcodierungsleistungen, ohne dass sich die Nutzer um Hardware oder Betriebssysteme kümmern müssen.
+![AWS Elemental Mediaconvert Logo](../assets/versuch1/aws_elemental_mediaconvert.svg){ align=left style="height:125px;width:125px;margin-top:0" } Als *Software-as-a-Service* Lösung bieten Cloud-Transcoder für verschiedenste Einsatzzwecke Transcodierungsleistungen, ohne dass sich die Nutzer um Hardware oder Betriebssysteme kümmern müssen.
 
 In diesem Versuch wird *AWS Elemental MediaConvert* verwendet. Nachdem ein Transcodierungsprofil erstellt worden ist, kann die Quelldatei aus dem S3 Objektspeicher gewählt werden und der Codierungsauftrag wird in die Warteschlange eingereiht. Ist die Transcodierung abgeschlossen, wird die transcodierte Datei im Objektspeicher abgelegt.
 

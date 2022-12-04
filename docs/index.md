@@ -14,8 +14,8 @@ Grundsätzlich folgt der Distributionsweg bei VoD-Systemen meist einem ähnliche
 
 Sind die verschiedenen Distributionspakete erstellt, können sie über ein Content-Delivery-Network (CDN) verteilt werden. Nutzer greifen dabei über eine Weboberfläche (Frontend) auf die im CDN gespeicherten Medien (Backend) zu.
 
-![Cloud Transkoder Workflow](assets/diagrams/workflow.svg#only-light){ style="width:100%" }
-![Cloud Transkoder Workflow](assets/diagrams/workflow_dark.svg#only-dark){ style="width:100%" }
+![Cloud Transcoder Workflow](assets/diagrams/workflow.svg#only-light){ style="width:100%" }
+![Cloud Transcoder Workflow](assets/diagrams/workflow_dark.svg#only-dark){ style="width:100%" }
 
 In der Praxis wird dieser simple Ablauf noch mit verschiedenen Steuerungs- und Monitoriung-Werkzeugen ergänzt, um Arbeitsschritte zu automatisieren oder bspw. dem zuständigen Mitarbeiter Benachrichtigungen zu senden, sobald eine Datei transcodiert wurde.
 
@@ -48,6 +48,6 @@ Neben der grafischen Oberfläche können Cloud-Ressourcen auch mithilfe von Komm
 
 | Nr.                                                           | Beschreibung
 | ------------------------------------------------------------- | --------------------------------------------------------------- |
-| [Versuch 1](./versuch1/01-einfuehrung)                        | Behandelt die grundlegenden Konzepte eines **Cloud-Transkoders**|
+| [Versuch 1](./versuch1/01-einfuehrung)                        | Behandelt die grundlegenden Konzepte eines **Cloud-Transcoders**|
 | [Versuch 2](https://youtu.be/dQw4w9WgXcQ)                     | Behandelt die grundlegenden Konzepte eines **CDNs**             |
 | [Versuch 3](https://youtu.be/dQw4w9WgXcQ)                     | Aufbau eines VOD-Systems via der **Web-GUI**                    |

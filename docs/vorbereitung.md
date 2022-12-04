@@ -15,7 +15,7 @@ Alle Programme sind sowohl für Windows und MacOS, als auch für diverse Linux-D
 
 ### Mediaplayer
 
-Zur Wiedergabe von transkodierten Videodateien sollte ein aktueller Mediaplayer vorhanden sein, der `.mp4`-Dateien mit dem Codec `h.264` öffnen kann. Empfohlen wird der [VLC Mediaplayer](https://www.videolan.org/vlc/index.de.html).
+Zur Wiedergabe von transcodierten Videodateien sollte ein aktueller Mediaplayer vorhanden sein, der `.mp4`-Dateien mit dem Codec `h.264` öffnen kann. Empfohlen wird der [VLC Mediaplayer](https://www.videolan.org/vlc/index.de.html).
 
 ### MediaInfo
 

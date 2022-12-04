@@ -1,6 +1,6 @@
 # AWS MediaConvert
 
-Um das Sample-Video zu transkodieren wird AWS Elemental MediaConvert verwendet. Dieser Service ist unter `Services -> Media Services -> MediaConvert` zu finden. Mit dem Klick auf *"Erste Schritte"* kann ein Transcoder-Auftrag erstellt werden. 
+Um das Sample-Video zu transcodieren wird AWS Elemental MediaConvert verwendet. Dieser Service ist unter `Services -> Media Services -> MediaConvert` zu finden. Mit dem Klick auf *"Erste Schritte"* kann ein Transcoder-Auftrag erstellt werden. 
 
 Vorher sollte jedoch sicher gestellt werden, dass man sich in der Region Frankfurt (eu-central-1) befindet.
 
@@ -16,7 +16,7 @@ Hier lässt sich über die Schaltfläche "Warteschlange erstellen" eine eigene W
 
 ![MediaConvert Warteschlange erstellen](../assets/versuch1/mediaconvert_queue_create.png)
 
-## Transkodierauftrag erstellen
+## Transcodierauftrag erstellen
 
 Um eine Videodatei in ein anderes Format zu transcodieren muss ein Transcodierauftrag erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.
 
