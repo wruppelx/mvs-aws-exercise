@@ -4,8 +4,8 @@
 
 Bewertet wird ein schriftlicher Versuchsbericht, sowie die erstellten Ressourcen und Transkodier-Aufträge in AWS / Akamai. Der schriftliche Bericht sollte **grob 3 Seiten pro Versuch** umfassen und die in der Versuchsanleitung gestellten Fragen beantworten. Das Abgabedatum für die den Versuchsbericht ist der 09.01.2023. Die Fragen sind folgendermaßen gekennzeichnet:
 
-!!! question "Frage n"
-    Fragestellung.
+!!! question "Beispielfrage n"
+    Beispiel-Fragestellung.
 
 ## Software
 

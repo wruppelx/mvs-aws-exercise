@@ -40,11 +40,11 @@ Im Reiter *"File Group"* lässt sich nun unter anderem eine Zieladresse auswähl
 
 Für diesen Versuch soll die Quelldatei in folgende Formate transcodiert werden:
 
-| Auflösung | maximale Bitrate | Audio Bitrate | Namensmodifikator |
-| --------- | ---------------- | ------------- | ----------------- |
-| 1920x1080 | 8     Mbit/s     | 192 Kbit/s    | `_1080p`          |
-| 1280x720  | 3     Mbit/s     | 128 Kbit/s    | `_720p`           |
-| 848x480   | 1,5   Mbit/s     | 96 Kbit/s     | `_480p`           |
+| Auflösung | maximale Video Bitrate | Audio Bitrate | Namensmodifikator |
+| --------- | ---------------------- | ------------- | ----------------- |
+| 1920x1080 | 8 Mbit/s               | 192 Kbit/s    | `_1080p`          |
+| 1280x720  | 3 Mbit/s               | 128 Kbit/s    | `_720p`           |
+| 848x480   | 1,5 Mbit/s             | 96 Kbit/s     | `_480p`           |
 
 Dafür können über den Button "Ausgabe hinzufügen" mehrere Ausgaben erstellt werden und Namensmodifikatoren vergeben werden. Diese Modifikatoren werden an den Dateinamen der transcodierten Dateien angehängt.
 
