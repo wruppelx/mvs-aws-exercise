@@ -1,0 +1,37 @@
+# NetStorage
+
+Wie in den Property-Einstellungen schon festgelegt, sollen die Quelldaten von einem NetStorage Origin Server abgerufen werden. Um die Internetverbindung der Hochschule nicht allzu sehr zu belasten wurde ein HLS-Clip schon auf NetStorage hochgeladen. Für jeden Teilnehmer des Praktikums steht ein eigene Ordner zur Verfügung. Hier können auch nach Belieben eigene Daten hinzugefügt werden.
+
+## Zugriff
+
+Auf NetStorage kann auf verschiedenen Wegen zugegriffen werden. Darunter sind unter Andrem `rsync`, `ssh` oder `HTTP`. Für diesen Versuch wird jedoch `ftp` genutzt.
+
+Zur NetStorage Übersicht gelangt man über die Seitenleiste unter `Origin Services -> NetStorage`.
+
+![NetStorage Menü](../assets/versuch2/akamai_netstorage_menu.png)
+
+Auf der Startseite werden die verfügbaren "Storage Groups" angezeigt. Diese sind in ihrer Funktion mit Buckets bei AWS zu vergleichen. In der Spalte "Access Methods" werden die verfügbaren Zugriffsmethoden für die Storage Groups angezeigt.
+
+![NetStorage Groups](../assets/versuch2/akamai_netstorage_groups.png)
+
+Durch einen Klick auf das Personen-Symbol in der linken Leiste werden die verfügbaren Upload Accounts angezeigt. Für jeden Teilnehmer des Praktikums ist ein eigener Nutzer erstellt.
+
+![NetStorage Upload Users](../assets/versuch2/akamai_netstorage_users.png)
+
+## FileZilla
+
+Um auf den Origin Server via ftp zuzugreifen wird ein FTP-Client benötigt. Dafür empfiehlt sich FileZilla. Dieser kann [hier](https://filezilla-project.org/download.php?show_all=1) heruntergeladen werden. Sollte keine dauerhafte Installation gewünscht sein, kann die Windows-Datei ohne "setup" im Namen heruntergeladen und entpackt werden.
+
+![FileZilla](../assets/versuch2/filezilla.png)
+
+In der oberen Leiste kann der Server sowie Nutzername und Passwort eingetragen werden. Diese Infos werden im Vorhinein zur Verfügung gestellt.
+
+Der linke Bereich ist das lokale Dateisystem. Hier können die Dateien, die hochgeladen werden sollen ausgewählt werden und per Drag-and-Drop auf die andere Seite verschobene werden.
+
+Im rechten Bereich befindet sich das Dateisystem auf der Serverseite.
+
+Der Fortschritt der Übertragung wird im unteren Bereich angezeigt.
+
+!!! question "Frage 4"
+    Dokumentieren Sie, welche Dateien bereits in Ihrem Ordner vorhanden sind. Finden Sie außerdem die Playlist-Dateien für den gesamten Clips sowie die einzelnen Qualitätsstufen.
+

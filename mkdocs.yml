@@ -1,6 +1,6 @@
 site_name: Video-on-Demand (AWS/Akamai)
-site_url: https://wruppelx.github.io/mvs-aws-exercise/
-repo_url: https://github.com/wruppelx/mvs-aws-exercise/
+site_url: https://wruppelx.github.io/mvs-aws-exercise
+repo_url: https://github.com/wruppelx/mvs-aws-exercise
 edit_uri: ""
 theme:
   name: material
@@ -31,6 +31,7 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  - footnotes
 
 plugins:
   - search:
@@ -42,7 +43,13 @@ nav:
   - Versuch 1:
     - Einführung Versuch 1: versuch1/01-einfuehrung.md
     - AWS S3: versuch1/02-S3.md
-    - AWS MediaConvert: versuch1/03-transcoder.md
+    - AWS MediaConvert: versuch1/03-transkoder.md
     - Download: versuch1/04-download.md
     - Fazit: versuch1/05-fazit.md
     - Troubleshooting: versuch1/06-troubleshooting.md
+  - Versuch 2:
+    - Einführung Versuch 2: versuch2/01-einfuehrung.md
+    - Property: versuch2/02-property.md
+    - Netstorage: versuch2/03-netstorage.md
+    - Inhalte Abrufen: versuch2/04-inhalte_abrufen.md
+    - Fazit: versuch2/05-fazit.md
