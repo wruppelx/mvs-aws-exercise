@@ -46,8 +46,8 @@ Neben der grafischen Oberfläche können Cloud-Ressourcen auch mithilfe von Komm
 
 ## Versuche im Überblick
 
-| Nr.                                                           | Beschreibung
-| ------------------------------------------------------------- | --------------------------------------------------------------- |
-| [Versuch 1](./versuch1/01-einfuehrung)                        | Behandelt die grundlegenden Konzepte eines **Cloud-Transcoders**|
-| [Versuch 2](./versuch2/01-einfuehrung)                        | Behandelt die grundlegenden Konzepte eines **CDNs**             |
-| [Versuch 3](https://youtu.be/dQw4w9WgXcQ)                     | Aufbau eines VOD-Systems via der **Web-GUI**                    |
+| Nr.                                    | Beschreibung
+| -------------------------------------- | --------------------------------------------------------------- |
+| [Versuch 1](./versuch1/01-einfuehrung) | Behandelt die grundlegenden Konzepte eines **Cloud-Transcoders**|
+| [Versuch 2](./versuch2/01-einfuehrung) | Behandelt die grundlegenden Konzepte eines **CDNs**             |
+| [Versuch 3](./versuch3/01-einfuehrung) | Aufbau eines **automatisierten** VOD-Systems                    |

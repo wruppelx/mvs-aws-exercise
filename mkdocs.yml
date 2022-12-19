@@ -43,7 +43,7 @@ nav:
   - Versuch 1:
     - Einführung Versuch 1: versuch1/01-einfuehrung.md
     - AWS S3: versuch1/02-S3.md
-    - AWS MediaConvert: versuch1/03-transkoder.md
+    - AWS MediaConvert: versuch1/03-transcoder.md
     - Download: versuch1/04-download.md
     - Fazit: versuch1/05-fazit.md
     - Troubleshooting: versuch1/06-troubleshooting.md
@@ -53,3 +53,9 @@ nav:
     - Netstorage: versuch2/03-netstorage.md
     - Inhalte Abrufen: versuch2/04-inhalte_abrufen.md
     - Fazit: versuch2/05-fazit.md
+  - Versuch 3:
+    - Einführung Versuch 3: versuch3/01-einfuehrung.md
+    - S3 Vorbereitungen: versuch3/02-s3_vorbereitungen.md
+    - SNS: versuch3/03-sns.md
+    - Lambda: versuch3/04-lambda.md
+    - Testen: versuch3/05-testen.md
