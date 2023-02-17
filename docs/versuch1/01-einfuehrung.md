@@ -11,7 +11,7 @@ Zuerst werden für diesen Versuch die Grundbegriffe geklärt und das Konzept erl
 Als Objektspeicher wird für diesen Versuch *AWS S3* verwendet. Einzelne Objekte können bis zu 5 Terabyte groß sein und entweder über die Web GUI oder über verschiedene APIs hochgeladen werden. Hier werden sowohl die Quelldateien für den Versuch als auch die transcodierten Dateien gespeichert.
 
 !!! warning "Kosten"
-    Gespeicherte Dateien verursachen sowohl pro Zeiteinheit Speicherkosten, als auch pro übertragene Gigabyte Downloadkosten. Bei kleinen Datenmengen, wie in diesem Versuch, belaufen sich die Kosten auf unter 1$ USD. Bei großen Projekten und Datenmengen können die Speicherkosten jedoch deutlich größer sein.
+    Gespeicherte Dateien verursachen sowohl pro Zeiteinheit Speicherkosten, als auch pro übertragene Gigabyte Downloadkosten. Bei kleinen Datenmengen, wie in diesen Versuchen, belaufen sich die Kosten auf unter 1$ USD. Bei großen Projekten und Datenmengen können die Speicherkosten jedoch deutlich größer sein.
 
 ### Transcodierer (*AWS Elemental MediaConvert*)
 
@@ -47,6 +47,6 @@ Das Dashboard ist der Startpunkt der AWS-Konsole und bietet die Möglichkeit ver
 Oben rechts kann die Region, also der Standort des verwendeten Rechenzentrums, verändert werden. Für die Versuche ist die nächstgelegende Region, in diesem Fall *Frankfurt (`eu-central-1`)*, die sinnvollste.
 
 !!! question "Frage 1"
-    Eine Region beschreibt kein einzelnes Rechenzentrum. Recherchieren und erläutern Sie die Begriffe "Region" und "Availability Zone".
+    Eine Region beschreibt kein einzelnes Rechenzentrum. Recherchieren und erläutern Sie die Begriffe "Region" und "Availability Zone". Wie sind Regionen und Availability Zones miteinander verbunden?
 
 ![AWS Region Setting](../assets/versuch1/aws_region.png)

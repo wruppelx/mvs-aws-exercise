@@ -8,7 +8,7 @@ theme:
   features:
     - toc.integrate
     - navigation.top
-    #- navigation.expand
+    - navigation.footer
   logo: assets/logo_hsrm_weiss.svg
   favicon: assets/favicon.png
   palette:
@@ -39,7 +39,7 @@ plugins:
 
 nav:
   - Übersicht: index.md
-  - Vorbereitung: vorbereitung.md
+  - Einleitung: einleitung.md
   - Versuch 1:
     - Einführung Versuch 1: versuch1/01-einfuehrung.md
     - AWS S3: versuch1/02-S3.md

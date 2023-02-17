@@ -4,7 +4,7 @@ Ist die Quelldatei fertig transcodiert, werden die resultierenden Dateien im eig
 
 ## Inspektion
 
-Zur Kontrolle, ob alle Codierungsparameter berücksichtigt wurden, lässt sich die Datei in MediaInfo öffnen. MediaInfo zeigt detailliert Eigenschaften und Metadaten für vielerlei verschiedene Medien an und kann auch zur Überprüfung der Datei genutzt werden. 
+Zur Kontrolle, ob alle Codierungsparameter berücksichtigt wurden, lässt sich die Datei in MediaInfo öffnen. MediaInfo zeigt detailliert Eigenschaften und Metadaten für vielerlei verschiedene Medien an. 
 
 Schon die Übersicht zeigt die Videodatenrate und die Audiodatenrate. Ebenso werden die verwendeten Audio- und Video-Codecs angezeigt. In anderen Ansichten, wie die "Tree"-Ansicht sind auch tiefer gehende Eigenschaften wie Farbraum und Chroma-Subsampling aufgelistet.
 
@@ -21,7 +21,6 @@ Schon die Übersicht zeigt die Videodatenrate und die Audiodatenrate. Ebenso wer
     | Auflösung (b x h)    |          |         |         |
     | Chroma-Subsampling   |          |         |         |
     | Farbtiefe            |          |         |         |
-    | Full Range / Limited |          |         |         |
     | Primärvalenzen       |          |         |         |
     | Audio-Codec          |          |         |         |
     | Audio-Bitrate        |          |         |         |
