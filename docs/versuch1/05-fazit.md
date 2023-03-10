@@ -19,5 +19,6 @@ In der Abgabe sollten die 3 transcodierten Dateien, die im Laufe des Versuchs er
     📄 Clip1_720p.mp4
     📄 Clip1_480p.mp4
     📁 Experimente
+        📄 Clip2_experiment.mp4
         ...
 ```

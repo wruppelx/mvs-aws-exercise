@@ -49,7 +49,7 @@ Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werde
     📁 Versuch 5
 ```
 
-!!! warning
+!!! warning "Warnung"
     Dateien, die sich nicht im Abgabeordner befinden, werden bei der Bewertung nicht berücksichtigt.
 
 ### Bewertungskriterien

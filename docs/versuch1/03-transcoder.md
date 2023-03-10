@@ -68,7 +68,7 @@ Die Parameter Auflösung und Bitrate können aus der vorangegangenen Tabelle ent
 
 Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingbrannt" also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.
 
-Als Präfix soll der eigene HDS-Nutzername mit einem Bindestrich gewählt werden, sodass `musterstudent - 00:00:00:00` im oberen Bereich des Bildes zu sehen ist. Als Schriftgröße soll "Small" gewählt werden. Die Position soll nicht verändert werden. 
+Als Präfix soll der eigene HDS-Nutzername mit einem Bindestrich gewählt (also `musterstudent - `) werden, sodass `musterstudent - 00:00:00:00` im oberen Bereich des Bildes zu sehen ist. Als Schriftgröße soll "Small" gewählt werden. Die Position soll nicht verändert werden. 
 
 ![MediaConvert Timecode](../assets/versuch1/mediaconvert_timecode.png)
 
@@ -86,9 +86,9 @@ Berechtigungen und Rollen in AWS sind ein komplexeres Thema, das vor allem in Ve
 
 ![MediaConvert Rolle](../assets/versuch1/mediaconvert_role.png)
 
-### Warteshlange
+### Warteschlange
 
-Als letzter Schritt muss im Menüpunkt "Aufgabenverwaltung" noch die eigene Warteschlange ausgewählt werden. Danach kann über den Button "Erstellen" der Transcodingauftrag erstellt und gestartet werden.
+Als letzter Schritt muss im Menüpunkt "Aufgabenverwaltung" noch die eigene Warteschlange ausgewählt werden. Danach kann über den Button "Erstellen" der Transcodingauftrag erstellt und gestartet werden. Welche Warteschlange genutzt werden soll, steht in der Mail mit den Zugangsdaten, die jeder Studierende bekommen haben sollte.
 
 ![MediaConvert Warteschlange](../assets/versuch1/mediaconvert_job_queue.png)
 

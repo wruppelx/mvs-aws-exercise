@@ -57,6 +57,7 @@ def lambda_handler(event, context):
     substring1 = media_key.rsplit('/', 1)
     substring2 = substring1[1].rsplit('.', 1)
     export_path = "s3://" + bucket + "/export/" + substring2[0] + "/"
+    username = bucket.replace("-mvs", " - ")
 
     print(export_path)
 
@@ -71,7 +72,14 @@ def lambda_handler(event, context):
 
     template_json['Settings']['Inputs'][0]['FileInput'] = media_path
     template_json['Settings']['OutputGroups'][0]['OutputGroupSettings']['HlsGroupSettings']['Destination'] = export_path
-    
+
+    for key in range(len(template_json['Settings']['OutputGroups'][0]['Outputs'])) : 
+        template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors'] = {}
+        template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors']['TimecodeBurnin'] = {}
+        template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors']['TimecodeBurnin']['FontSize'] = 16
+        template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors']['TimecodeBurnin']['Prefix'] = username
+    template_json.update(template_json)
+   
     print(template_json)    
 
     mediaconvert = boto3.client('mediaconvert', region_name='eu-central-1', endpoint_url='https://yk2lhke4b.mediaconvert.eu-central-1.amazonaws.com')
@@ -93,36 +101,7 @@ def lambda_handler(event, context):
 
 Damit die Transcoding-Aufträge in der richtigen Warteschlange landen und die Ergebnisse in das richtige SNS Thema veröffentlicht werden, müssen diese Punkte im Code modifiziert werden.
 
-In Zeile 9 muss die topic_arn durch das eigene Thema aus SNS ersetzt werden. Die topic_arn findet man in der Themenübersicht in der Liste in der Spalte "ARN". In Zeile 10 muss außerdem die Warteschlange anhand folgender Tabelle eingetragen werden. Dabei kann einfach "Default" durch die entsprechende Warteschlange ersetzt werden.
-
-| Nutzer      | Warteschlange |
-| ----------- | ------------- |
-| anngoxxx    | anngoxxx      |
-| behammer    | behammer      |
-| borakhle    | Default       |
-| darammin    | darammin      |
-| deyakimo    | Default       |
-| evcelikx    | anngoxxx      |
-| ewmorhat    | ewmorhat      |
-| flpaersc    | behammer      |
-| frfluitx    | frfluitx      |
-| hadrissa    | darammin      |
-| jadorbat    | ewmorhat      |
-| jakunert    | frfluitx      |
-| joblaumx    | maboerze      |
-| johindea    | phanselm      |
-| jokraftx    | roscheaa      |
-| lurottma    | wruppelxmvs   |
-| maboerze    | maboerze      |
-| makleiaa    | Default       |
-| nikrugxx    | anngoxxx      |
-| pahoelpe    | behammer      |
-| phanselm    | phanselm      |
-| robrauaa    | darammin      |
-| roscheaa    | roscheaa      |
-| segebaue    | ewmorhat      |
-| tomeuser    | frfluitx      |
-| wruppelxmvs | wruppelxmvs   |
+In Zeile 9 muss die topic_arn durch das eigene Thema aus SNS ersetzt werden. Die topic_arn findet man in der Themenübersicht in der Liste in der Spalte "ARN". In Zeile 10 muss außerdem die Warteschlange eingetragen werden. Dabei kann einfach "Default" durch die entsprechende Warteschlange ersetzt werden. Es soll die gleiche Warteschlange wie in Versuch 1 genutzt werden, die auch in der Mail mit den Zugangsdaten zu finden ist.
 
 Ist der Code hinzugefügt und modifiziert, kann die Lambdafunktion mithilfe des Buttons "Deploy" aktualisiert werden.
 
@@ -182,7 +161,6 @@ def lambda_handler(event, context):
 
             print(ftp_path)
             
-            #Download the file to /tmp/ folder
             filename = os.path.basename(sourcekey)
             download_path = '/tmp/'+ filename
             print(download_path)
@@ -190,12 +168,12 @@ def lambda_handler(event, context):
             
             os.chdir("/tmp/")
             with FTP(FTP_HOST, FTP_USER, FTP_PWD) as ftp, open(filename, 'rb') as file:
-                if directory_exists(ftp_folder[0]) is False: # (or negate, whatever you prefer for readability)
+                if directory_exists(ftp_folder[0]) is False: 
                     ftp.mkd(ftp_folder[0])
                 ftp.cwd(ftp_folder[0])
                 ftp.storbinary(f'STOR {filename}', file)
 
-            #We don't need the file in /tmp/ folder anymore
+
             os.remove(filename)
 
 # Check if directory exists (in current location)
