@@ -4,7 +4,7 @@ Die Inhalte sind nun über das CDN erreichbar. Der HLS-Stream kann damit öffent
 
 ## HLS-Player
 
-Zum Testen der HLS-Funktionalität soll die Demo-Instanz von hls.js genutzt werden. hls.js ist eine quelloffene JavaScript Bibliothek, die HLS-Streams im Browser wiedergeben kann. Der Demoplayer ist unter [https://hls-js.netlify.app/demo/](https://hls-js.netlify.app/demo/) zu finden.
+Zum Testen der HLS-Funktionalität soll die Demo-Instanz von hls.js genutzt werden. hls.js ist eine quelloffene JavaScript Bibliothek, die HLS-Streams im Browser wiedergeben kann. Der Demoplayer ist unter [https://hlsjs.video-dev.org/demo/](https://hlsjs.video-dev.org/demo/) zu finden.
 
 !!! warning "Kompatibilität"
     Auf meinem Mac konnte die Seite via Safari zwar geladen werden, das Video konnte aber nicht gestartet werden. Auf anderen HLS-Playern trat das gleiche Problem auf. Über den Firefox Browser funktionierte es jedoch Problemlos.

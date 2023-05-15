@@ -9,6 +9,7 @@ theme:
     - toc.integrate
     - navigation.top
     - navigation.footer
+    - content.code.copy
   logo: assets/logo_hsrm_weiss.svg
   favicon: assets/favicon.png
   palette:
@@ -60,4 +61,5 @@ nav:
     - Lambda: versuch3/04-lambda.md
     - Testen: versuch3/05-testen.md
     - Fazit: versuch3/06-fazit.md
+    - Troubleshooting: versuch3/07-troubleshooting.md
     

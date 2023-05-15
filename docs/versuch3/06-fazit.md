@@ -4,7 +4,7 @@ In Versuch 3 wurden die Grundprinzipien eines automatisieren Transcoding-Workflo
 
 ## Abgabe
 
-In der Abgabe sollte mindestens ein Beispiel für transcodierte Dateien mit der gegebenen Vorlage und ein Beispiel für transcodierte Dateien mit der eigenen Vorlage enthalten sein. Dabei müssen nicht alle Dateien in die Abgabe eingefügt werden, sondern jeweilt nur die Index-Dateien und ein Segment jeder Qualitätsstufe.
+In der Abgabe sollte mindestens ein Beispiel für transcodierte Dateien mit der gegebenen Vorlage und ein Beispiel für transcodierte Dateien mit der eigenen Vorlage enthalten sein. **Dabei müssen nicht alle Dateien in die Abgabe eingefügt werden, sondern jeweils nur die Index-Dateien und ein Segment jeder Qualitätsstufe.**
 
 ```
 📁 Versuch 3
