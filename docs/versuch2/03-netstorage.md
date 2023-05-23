@@ -24,7 +24,7 @@ Um auf den Origin Server via ftp zuzugreifen wird ein FTP-Client benötigt. Daf�
 
 ![FileZilla](../assets/versuch2/filezilla.png)
 
-In der oberen Leiste kann der Server sowie Nutzername und Passwort eingetragen werden. Diese Infos werden im Vorhinein zur Verfügung gestellt.
+In der oberen Leiste kann der Server sowie Nutzername und Passwort eingetragen werden. Der Nutzername ist der eigene HDS-Nutzername und das Passwort setzt sich wie beim AWS-Login auch aus Nutzername, Matrikelnummer und Ausrufezeichen (z.B. `musterst12345!`) zusammen.
 
 Der linke Bereich ist das lokale Dateisystem. Hier können die Dateien, die hochgeladen werden sollen ausgewählt werden und per Drag-and-Drop auf die andere Seite verschobene werden.
 

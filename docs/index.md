@@ -11,8 +11,7 @@ In dieser praktischen Übung zum Thema Cloud-Transcodierung soll ein grundlegend
 | [Versuch 1](./versuch1/01-einfuehrung) | Grundlegende Konzepte eines **Cloud-Transcoders**        |
 | [Versuch 2](./versuch2/01-einfuehrung) | Grundlegende Konzepte eines **CDNs**                     |
 | [Versuch 3](./versuch3/01-einfuehrung) | Aufbau eines **automatisierten** VOD-Workflows           |
-| [Versuch 4](./versuch4/01-einfuehrung) | Transcodieren in **verschlüsselte Distributionsformate** |
-| [Versuch 5](./versuch5/01-einfuehrung) | **Kommandozeilenbefehle** und **APIs**                   |
+| [Versuch 4](./versuch4/01-einfuehrung) | **Kommandozeilenbefehle** und **APIs**                   |
 
 ## Abgabe
 

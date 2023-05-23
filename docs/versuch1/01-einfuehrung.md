@@ -26,11 +26,11 @@ In diesem Versuch wird *AWS Elemental MediaConvert* verwendet. Nachdem ein Trans
 
 ### Log-in
 
-In diesem Versuch greifen wir auf AWS über die WebGUI zu. Einloggen kann man sich über den Browser auf [aws.amazon.com](https://aws.amazon.com/de/). In der Anmeldemaske kann man zwischen einem *Stammbenutzer* und einem *IAM-Benutzer* wählen. Die Hochschule stellt verwaltete *IAM-Benutzer* zur Verfügung, daher muss diese Option gewählt werden. Die Kontonummer lautet `757773874047`.
+In diesem Versuch greifen wir auf AWS über die WebGUI zu. Einloggen kann man sich über den Browser auf [aws.amazon.com](https://aws.amazon.com/de/). In der Anmeldemaske kann man zwischen einem *Stammbenutzer* und einem *IAM-Benutzer* wählen. Die Hochschule stellt verwaltete *IAM-Benutzer* zur Verfügung, daher muss diese Option gewählt werden. Die Kontonummer lautet `757773874047`, soweit nicht anders angegeben.
 
 ![AWS Login Maske](../assets/versuch1/aws_login_01.png)
 
-Nach Eingabe der bereitgestellten Kontonummer können auch der Benutzername sowie das Passwort eingegeben, und der Log-in bestätigt werden.
+Nach Eingabe der bereitgestellten Kontonummer können auch der Benutzername sowie das Passwort eingegeben, und der Log-in bestätigt werden. Das Passwort besteht aus dem Nutzernamen in kleinbuchstaben, der Matrikelnummer und einem Ausrufezeichen. Für den Nutzer `musterst` mit der Matrikelnummer `12345` würde das Passwort also `musterst12345!` lauten.
 
 ![AWS Login Maske](../assets/versuch1/aws_login_02.png)
 
