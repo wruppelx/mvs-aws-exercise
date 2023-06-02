@@ -1,6 +1,6 @@
 # NetStorage
 
-Wie in den Property-Einstellungen schon festgelegt, sollen die Quelldaten von einem NetStorage Origin Server abgerufen werden. Um die Internetverbindung der Hochschule nicht allzu sehr zu belasten wurde ein HLS-Clip schon auf NetStorage hochgeladen. Für jeden Teilnehmer des Praktikums steht ein eigene Ordner zur Verfügung. Hier können auch nach Belieben eigene Daten hinzugefügt werden.
+Wie in den Property-Einstellungen schon festgelegt, sollen die Quelldaten von einem NetStorage Origin Server abgerufen werden. Um die Internetverbindung der Hochschule nicht allzu sehr zu belasten, wurde ein HLS-Clip schon auf NetStorage hochgeladen. Für jeden Teilnehmer des Praktikums steht ein eigene Ordner zur Verfügung. Hier können auch nach Belieben eigene Daten hinzugefügt werden.
 
 ## Zugriff
 
@@ -20,18 +20,18 @@ Durch einen Klick auf das Personen-Symbol in der linken Leiste werden die verfü
 
 ## FileZilla
 
-Um auf den Origin Server via ftp zuzugreifen wird ein FTP-Client benötigt. Dafür empfiehlt sich FileZilla. Dieser kann [hier](https://filezilla-project.org/download.php?show_all=1) heruntergeladen werden. Sollte keine dauerhafte Installation gewünscht sein, kann die Windows-Datei ohne "setup" im Namen heruntergeladen und entpackt werden.
+Um auf den Origin Server via ftp zuzugreifen, wird ein FTP-Client benötigt. Dafür empfiehlt sich FileZilla. Dieser kann [hier](https://filezilla-project.org/download.php?show_all=1) heruntergeladen werden. Sollte keine dauerhafte Installation gewünscht sein, kann die Windows-Datei ohne "setup" im Namen heruntergeladen und entpackt werden.
 
 ![FileZilla](../assets/versuch2/filezilla.png)
 
 In der oberen Leiste kann der Server sowie Nutzername und Passwort eingetragen werden. Der Nutzername ist der eigene HDS-Nutzername und das Passwort setzt sich wie beim AWS-Login auch aus Nutzername, Matrikelnummer und Ausrufezeichen (z.B. `musterst12345!`) zusammen.
 
-Der linke Bereich ist das lokale Dateisystem. Hier können die Dateien, die hochgeladen werden sollen ausgewählt werden und per Drag-and-Drop auf die andere Seite verschobene werden.
+Der linke Bereich ist das lokale Dateisystem. Hier können die Dateien, die hochgeladen werden sollen, ausgewählt werden und per Drag-and-Drop auf die andere Seite verschobene werden.
 
 Im rechten Bereich befindet sich das Dateisystem auf der Serverseite.
 
 Der Fortschritt der Übertragung wird im unteren Bereich angezeigt.
 
 !!! question "Frage 4"
-    Dokumentieren Sie, welche Dateien bereits in Ihrem Ordner vorhanden sind. Finden Sie außerdem die Playlist-Dateien für den gesamten Clips sowie die einzelnen Qualitätsstufen.
+    Dokumentieren Sie, welche Dateien bereits in Ihrem Ordner vorhanden sind. Finden Sie außerdem die Playlist-Dateien für den gesamten Clip sowie die einzelnen Qualitätsstufen.
 

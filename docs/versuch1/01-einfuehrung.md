@@ -1,6 +1,6 @@
 # Einführung
 
-Zuerst werden für diesen Versuch die Grundbegriffe geklärt und das Konzept erläutert. Danach wird mithilfe der Schritt für Schritt Anleitung ein erster Transcodier-Auftrag erstellt und gestartet. Ziel ist es, nach Versuch 1 ein grundlegendes Verständnis für Cloud-Transcoder zu haben und einen Cloud-Transcoder erstellen zu können.
+Zuerst werden für diesen Versuch die Grundbegriffe geklärt und das Konzept erläutert. Danach wird mithilfe der Schritt für Schritt Anleitung ein erster Transcodierauftrag erstellt und gestartet. Ziel ist es, nach Versuch 1 ein grundlegendes Verständnis für Cloud-Transcoder zu haben und einen Cloud-Transcoder erstellen zu können.
 
 ## Grundbegriffe
 
@@ -11,7 +11,7 @@ Zuerst werden für diesen Versuch die Grundbegriffe geklärt und das Konzept erl
 Als Objektspeicher wird für diesen Versuch *AWS S3* verwendet. Einzelne Objekte können bis zu 5 Terabyte groß sein und entweder über die Web GUI oder über verschiedene APIs hochgeladen werden. Hier werden sowohl die Quelldateien für den Versuch als auch die transcodierten Dateien gespeichert.
 
 !!! warning "Kosten"
-    Gespeicherte Dateien verursachen sowohl pro Zeiteinheit Speicherkosten, als auch pro übertragene Gigabyte Downloadkosten. Bei kleinen Datenmengen, wie in diesen Versuchen, belaufen sich die Kosten auf unter 1$ USD. Bei großen Projekten und Datenmengen können die Speicherkosten jedoch deutlich größer sein.
+    Gespeicherte Dateien verursachen sowohl pro Zeiteinheit Speicherkosten als auch pro übertragene Gigabyte Downloadkosten. Bei kleinen Datenmengen wie in diesen Versuchen belaufen sich die Kosten auf unter 1$ USD. Bei großen Projekten und Datenmengen können die Speicherkosten jedoch deutlich größer sein.
 
 ### Transcodierer (*AWS Elemental MediaConvert*)
 
@@ -20,7 +20,7 @@ Als Objektspeicher wird für diesen Versuch *AWS S3* verwendet. Einzelne Objekte
 In diesem Versuch wird *AWS Elemental MediaConvert* verwendet. Nachdem ein Transcodierungsprofil erstellt worden ist, kann die Quelldatei aus dem S3 Objektspeicher gewählt werden und der Codierungsauftrag wird in die Warteschlange eingereiht. Ist die Transcodierung abgeschlossen, wird die transcodierte Datei im Objektspeicher abgelegt.
 
 !!! warning "Kosten"
-    Die Kosten pro Transcodierung hängen von Auflösung, Bildrate und Dauer der Quelldatei ab. Pro Minute Quellmaterial werden bei HD-Auflösung bspw. ca. 2 Cent USD fällig. So fallen für die Transcodierung eines zweistündigen Filmes ca 2,40$ USD an.
+    Die Kosten pro Transcodierung hängen von Auflösung, Bildrate und Dauer der Quelldatei ab. Pro eine Minute Quellmaterial werden bei HD-Auflösung bspw. ca. 2 Cent USD fällig. So fallen für die Transcodierung eines zweistündigen Filmes ca 2,40$ USD an.
 
 ## AWS WebGUI
 
@@ -30,21 +30,21 @@ In diesem Versuch greifen wir auf AWS über die WebGUI zu. Einloggen kann man si
 
 ![AWS Login Maske](../assets/versuch1/aws_login_01.png)
 
-Nach Eingabe der bereitgestellten Kontonummer können auch der Benutzername sowie das Passwort eingegeben, und der Log-in bestätigt werden. Das Passwort besteht aus dem Nutzernamen in kleinbuchstaben, der Matrikelnummer und einem Ausrufezeichen. Für den Nutzer `musterst` mit der Matrikelnummer `12345` würde das Passwort also `musterst12345!` lauten.
+Nach Eingabe der bereitgestellten Kontonummer können auch der Benutzername sowie das Passwort eingegeben und der Log-in bestätigt werden. Das Passwort besteht aus dem Nutzernamen in Kleinbuchstaben, der Matrikelnummer und einem Ausrufezeichen. Für den Nutzer `musterst` mit der Matrikelnummer `12345` würde das Passwort also `musterst12345!` lauten.
 
 ![AWS Login Maske](../assets/versuch1/aws_login_02.png)
 
-Bei der ersten Anmeldung muss das Passwort auf ein nutzereigenes Passwort geändert werden.
+Bei der ersten Anmeldung muss das Passwort auf ein Nutzereigenes Passwort geändert werden.
 
 ![AWS Password Ändern](../assets/versuch1/aws_password_change.png)
 
-Das Dashboard ist der Startpunkt der AWS-Konsole und bietet die Möglichkeit verschiedene Widgets anzuzeigen. Oben links lassen sich verschiedene Produkte und Services auswählen. Diese können ebenso über die Suchleiste gefunden werden. 
+Das Dashboard ist der Startpunkt der AWS-Konsole und bietet die Möglichkeit, verschiedene Widgets anzuzeigen. Oben links lassen sich verschiedene Produkte und Services auswählen. Diese können ebenso über die Suchleiste gefunden werden. 
 
 ![AWS WebGUI](../assets/versuch1/aws_dashboard.png)
 
 ### Region
 
-Oben rechts kann die Region, also der Standort des verwendeten Rechenzentrums, verändert werden. Für die Versuche ist die nächstgelegende Region, in diesem Fall *Frankfurt (`eu-central-1`)*, die sinnvollste.
+Oben rechts kann die Region, also der Standort des verwendeten Rechenzentrums, verändert werden. Für die Versuche ist die Nächstgelegende Region in diesem Fall *Frankfurt (`eu-central-1`)*, die sinnvollste.
 
 !!! question "Frage 1"
     Eine Region beschreibt kein einzelnes Rechenzentrum. Recherchieren und erläutern Sie die Begriffe "Region" und "Availability Zone". Wie sind Regionen und Availability Zones miteinander verbunden?

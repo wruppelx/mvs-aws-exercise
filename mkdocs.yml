@@ -62,4 +62,9 @@ nav:
     - Testen: versuch3/05-testen.md
     - Fazit: versuch3/06-fazit.md
     - Troubleshooting: versuch3/07-troubleshooting.md
-    
+  - Versuch 4:
+    - Einführung Versuch 4: versuch4/01-einfuehrung.md
+    - CloudShell: versuch4/02-cloudshell.md
+    - Python SDK: versuch4/03-python_sdk.md
+    - Fazit: versuch4/04-fazit.md
+    - Troubleshooting: versuch4/05-troubleshooting.md

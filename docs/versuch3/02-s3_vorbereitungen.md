@@ -4,7 +4,7 @@ Für diesen Versuch werden Unterordner im bereits vorhandenen S3 Bucket benötig
 
 ## Unterordner erstellen
 
-Um den Unterordner zu erstellen, muss auf der AWS Weboberfläche der entsprechende Bucket geöffent werden und über den Button "Ordner erstellen" erstellt werden.
+Um den Unterordner zu erstellen, muss auf der AWS Weboberfläche der entsprechende Bucket geöffnet werden und über den Button "Ordner erstellen" erstellt werden.
 
 ![S3 Bucket](../assets/versuch3/s3_bucket.png)
 

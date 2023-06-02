@@ -1,6 +1,6 @@
 # Einführung
 
-In Versuch 2 wird vor allem auf das CDN eingegangen. Die Verteilung der transcodierten Mediendateien steht im Vordergrund. Auf die tiefergehende Theorie von CDNs wird nicht mehr eingegangen. 
+In Versuch 2 wird vor allem auf das CDN eingegangen. Die Verteilung der transcodierten Mediendateien steht im Vordergrund. Auf die tiefer gehende Theorie von CDNs wird nicht mehr eingegangen. 
 
 ## Grundbegriffe
 
@@ -31,11 +31,11 @@ Damit ein Mediaplayer auf die im CDN gespeicherten Medien zugreifen kann, müsse
 
 #### Property Hostname
 
-Im Normalfall ist der Property Hostname die Adresse der eigenen Domain, unter dem die Medien verfügbar sein sollen. Im Falle des ZDFs könnte dies `cdn.zdf.de` sein. Für diesen Versuch steht keine eigene Domain zu verfügung, weswegen wir als Property Hostname auch eine Domain von Akamai nutzen.
+Im Normalfall ist der Property Hostname die Adresse der eigenen Domain, unter dem die Medien verfügbar sein sollen. Im Falle des ZDFs könnte dies `cdn.zdf.de` sein. Für diesen Versuch steht keine eigene Domain zu Verfügung, weswegen wir als Property Hostname auch eine Domain von Akamai nutzen.
 
 #### Edge Hostname
 
-Der Edge Hostname ist das Equivalent zum Property Hostname auf Seiten von Akamai. Dieser könnte z.B. lauten `zdf.akamaized.net`. In der Praxis verweist der DNS-Eintrag des Property Hostname auf den Edge Hostname und die Daten können abgerufen werden.
+Der Edge Hostname ist das Äquivalent zum Property Hostname aufseiten von Akamai. Dieser könnte z.B. lauten `zdf.akamaized.net`. In der Praxis verweist der DNS-Eintrag des Property Hostname auf den Edge Hostname und die Daten können abgerufen werden.
 
 ![CDN Flussdiagramm](../assets/versuch2/diagrams/cdn-flow.svg#only-light){ style="width:100%" }
 ![CDN Flussdiagramm](../assets/versuch2/diagrams/cdn-flow_dark.svg#only-dark){ style="width:100%" }
@@ -44,14 +44,14 @@ Der Edge Hostname ist das Equivalent zum Property Hostname auf Seiten von Akamai
 
 ### Login
 
-Die Akamai WebGUI lässt sich über den Browser auf [control.akamai.com](https://control.akamai.com) aufrufen. Vor Beginn des Versuchs sollte eine Informations-Mail mit den Schritten zu einem Passwort angekommen sein. Über die Funktion "Passwort vergessen" lässt sich ein eigenes Passwort vergeben.
+Die Akamai WebGUI lässt sich über den Browser auf [control.akamai.com](https://control.akamai.com) aufrufen. Vor Beginn des Versuchs sollte eine Informationsmail mit den Schritten zu einem Passwort angekommen sein. Über die Funktion "Passwort vergessen" lässt sich ein eigenes Passwort vergeben.
 
 ![Akamai Login Maske](../assets/versuch2/akamai_login.png)
 
 !!! warning "Sicherheit"
     Akamai pocht auf die Nutzung von Multi-Faktor-Authentifizierung. Falls Sie dies noch nicht bei Ihren privaten und geschäftlichen Accounts aktiviert haben, sollten Sie dies unbedingt tun und die Backup-Codes an einem sicheren Ort aufbewahren. Die Nutzung von 2-Faktor-Authentifizierung (2FA) via SMS ist nicht sicher.
 
-    Wenn bei der Anmeldung bei Akamai eine Warnung bezüglich 2FA auftaucht können Sie für den Versuch getrost auf "Später einrichten" klicken. Außerhalb des Praktikums sollte 2FA aber auf jeden Fall aktiviert sein.
+    Wenn bei der Anmeldung bei Akamai eine Warnung bezüglich 2FA auftaucht, können Sie für den Versuch getrost auf "Später einrichten" klicken. Außerhalb des Praktikums sollte 2FA aber auf jeden Fall aktiviert sein.
 
     ![Akamai 2FA](../assets/versuch2/akamai_2fa.png)
 

@@ -2,13 +2,13 @@
 
 ## Funktion 1: CreateJob
 
-Die erste Funktion soll wenn neue Dateien dem `ingest`-Ordner hinzugefügt werden einen entsprechenden Transcodierauftrag erstellen und im Anschluss eine Statusmeldung via SNS versenden.
+Die erste Funktion soll, wenn neue Dateien dem `ingest`-Ordner hinzugefügt werden, einen entsprechenden Transcodierauftrag erstellen und im Anschluss eine Statusmeldung via SNS versenden.
 
 Dazu soll über das linke Menü der Punkt "Funktionen" angeklickt und auf der Übersicht der Funktionen auf "Funktion erstellen" klicken. Der Funktionsname soll folgendermaßen aufgebaut sein: `[HDS-Nutzername]-CreateJob`. Als Laufzeit soll Python gewählt werden. Im Unterpunkt "Standard-Ausführungsrolle ändern" soll die Option "Verwenden einer vorhandenen Rolle" gewählt werden und die bestehende Rolle "MVS_Lambda_Role" gewählt werden.
 
 ![Lambda Funktion erstellen](../assets/versuch3/lambda_createFunction.png)
 
-Sind die Infos eingetragen kann auf "Funktion erstellen" geklickt werden um die Funktion zu erstellen.
+Sind die Infos eingetragen, kann auf "Funktion erstellen" geklickt werden, um die Funktion zu erstellen.
 
 ![Lambda Funktion erstellt](../assets/versuch3/lambda_createFunctionSuccess.png)
 
@@ -30,12 +30,14 @@ Ist der Auslöser erstellt, wird er oben in der Übersicht angezeigt.
 ![Lambda Funktion Auslöser Bucket](../assets/versuch3/lambda_ausloeser_bucket_success.png)
 
 !!! info
-    Da es sich bei IMF-Paketen um ganze Ordner handelt sind diese auch komplexer zu automatisieren. Um die grundlegenden Konzepte besser zu übermitteln, werden in diesem Versuch nur mp4-Dateien verwendet. Das gleiche lässt sich aber auch auf IMF-Pakete übertragen.
+    Da es sich bei IMF-Paketen um ganze Ordner handelt, sind diese auch komplexer zu automatisieren. Um die grundlegenden Konzepte besser zu übermitteln, werden in diesem Versuch nur mp4-Dateien verwendet. Das gleiche lässt sich aber auch auf IMF-Pakete übertragen.
 
 ### Code
 
 !!! question "Frage 2"
-    Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird.
+    Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird. 
+    
+    Fügen Sie den kommentierten Code entweder als .py-Datei der Abgabe hinzu oder integrieren Sie den Code als Bild oder Text in den Bericht.
 
 Im Nachfolgenden soll der Python-Code in die automatisch erstellte Datei "lambda_function.py" kopiert werden.
 
@@ -44,31 +46,27 @@ import boto3
 import json
 
 def lambda_handler(event, context):
-    
+
     s3 = boto3.client('s3')
     sns = boto3.client('sns')
-    
-    topic_arn = 'arn:aws:sns:eu-central-1:757773874047:musterstudent'
-    queue= 'arn:aws:mediaconvert:eu-central-1:757773874047:queues/Default'
-    
+
+    topic_arn = 'xxxxxxxxx'
+    queue= 'xxxxxxxxx'
+
     bucket = event['Records'][0]['s3']['bucket']['name']
     media_key = event['Records'][0]['s3']['object']['key']
     media_path = "s3://" + bucket + "/" + media_key
     substring1 = media_key.rsplit('/', 1)
     substring2 = substring1[1].rsplit('.', 1)
     export_path = "s3://" + bucket + "/export/" + substring2[0] + "/"
-    username = bucket.replace("-mvs", " - ")
-
-    print(export_path)
+    username = bucket.replace("mvs-", "") + " - "
 
     try:
-        file = s3.get_object(Bucket=bucket, Key="templates/hls_template.json")
+        file = s3.get_object(Bucket=bucket, Key="hls_template.json")
     except:
         status = "An exception occured while downloading the transcoding template"
         sns.publish(TopicArn=topic_arn, Message=status)
     template_json = json.loads(file['Body'].read())
-
-    print(template_json)
 
     template_json['Settings']['Inputs'][0]['FileInput'] = media_path
     template_json['Settings']['OutputGroups'][0]['OutputGroupSettings']['HlsGroupSettings']['Destination'] = export_path
@@ -79,8 +77,6 @@ def lambda_handler(event, context):
         template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors']['TimecodeBurnin']['FontSize'] = 16
         template_json['Settings']['OutputGroups'][0]['Outputs'][key]['VideoDescription']['VideoPreprocessors']['TimecodeBurnin']['Prefix'] = username
     template_json.update(template_json)
-   
-    print(template_json)    
 
     mediaconvert = boto3.client('mediaconvert', region_name='eu-central-1', endpoint_url='https://yk2lhke4b.mediaconvert.eu-central-1.amazonaws.com')
 
@@ -95,8 +91,8 @@ def lambda_handler(event, context):
     except:
         status = "An exception occured while creating the transcoding job"
         sns.publish(TopicArn=topic_arn, Message=status)
-        
-    print(response['Job']['Id'])
+
+    print("Job-ID: " + response['Job']['Id'])
 ```
 
 Damit die Transcoding-Aufträge in der richtigen Warteschlange landen und die Ergebnisse in das richtige SNS Thema veröffentlicht werden, müssen diese Punkte im Code modifiziert werden.
@@ -109,7 +105,7 @@ Ist der Code hinzugefügt und modifiziert, kann die Lambdafunktion mithilfe des 
 
 ### Weitere Einstellungen
 
-Damit die Funktion reibungslos ablaufen kann muss noch eine weitere Option geändert werden. Da die Erstellung des Auftrages und das Abrufen der Transcodiereinstellungen verhältnismäßig lang dauert, muss das Timeout der Funktion vergrößert werden. Das Timeout dient dazu, dass Funktionen sich nicht in Endlosschleifen verfangen und damit viel Geld kosten.
+Damit die Funktion reibungslos ablaufen kann, muss noch eine weitere Option geändert werden. Da die Erstellung des Auftrages und das Abrufen der Transcodiereinstellungen verhältnismäßig lang dauert, muss das Timeout der Funktion vergrößert werden. Das Timeout dient dazu, dass Funktionen sich nicht in Endlosschleifen verfangen und damit viel Geld kosten.
 
 Im Reiter `Konfiguration -> Allgemeine Konfiguration` kann das Timeout geändert werden. Dazu klickt man auf "Bearbeiten" und wählt ein Timeout von 10 Sekunden. Dies sollte ausreichend sein, um die Funktion auszuführen (Die durchschnittliche Ausführungszeit liegt bei ca. 2,5 Sekunden).
 
@@ -119,7 +115,7 @@ Im Reiter `Konfiguration -> Allgemeine Konfiguration` kann das Timeout geändert
 
 Die zweite Funktion soll bei neuen Dateien im Ordner `export/` die entsprechenden Dateien via FTP zu Akamai hochladen.
 
-Die Lambda Funktion soll wie bei der ersten Funktion erstellt werden. Der Name soll sich diesmal wie folgt zusammengesetzt werden: `[HDS-Nutzername]-UploadFile`. Als Laufzeit soll wieder Python gewählt werden. Ebeneso soll die Standard-Ausführungsrolle wie bei Funktion 1 geändert werden.
+Die Lambda Funktion soll wie bei der ersten Funktion erstellt werden. Der Name soll sich diesmal wie folgt zusammengesetzt werden: `[HDS-Nutzername]-UploadFile`. Als Laufzeit soll wieder Python gewählt werden. Ebenso soll die Standard-Ausführungsrolle wie bei Funktion 1 geändert werden.
 
 ### Auslöser
 
@@ -130,7 +126,9 @@ Als Auslöser soll diesmal "export/" eingetragen werden. Die Suffix-Filterung ka
 ### Code
 
 !!! question "Frage 3"
-    Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird.
+    Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird. 
+    
+    Fügen Sie den kommentierten Code entweder als .py-Datei der Abgabe hinzu oder integrieren Sie den Code als Bild oder Text in den Bericht.
 
 Im Nachfolgenden soll der Python-Code in die automatisch erstellte Datei "lambda_function.py" kopiert werden.
 
@@ -190,4 +188,4 @@ In Zeile 7 bis 9 müssen die Login-Daten für den Akamai ftp Origin Server einge
 
 ### Weitere Einstellungen
 
-Sollen große Dateien hochgeladen werden, ist es unter Umständen nötig das Timeout zu vergrößern. Außerdem muss bei großen Dateien die Größe des Flüchtigen Speichers erhöht werden. Bei den kleinen Transport-Stream Dateien ist dies jedoch nicht nötig.
+Sollen große Dateien hochgeladen werden, ist es unter Umständen nötig, das Timeout zu vergrößern. Außerdem muss bei großen Dateien die Größe des flüchtigen Speichers erhöht werden. Bei den kleinen Transport-Stream Dateien ist dies jedoch nicht nötig.

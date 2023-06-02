@@ -18,7 +18,7 @@ Danach kann der Name der Property festgelegt werden. Hier soll der HDS-Anmeldena
 
 ## Konfiguration
 
-Ist der Name bestätigt werden die tiefergehende Konfiguration festgelegt. Zuerst müssen Hostnamen hinzugefügt werden.
+Ist der Name bestätigt, werden die tiefer gehende Konfiguration festgelegt. Zuerst müssen Hostnamen hinzugefügt werden.
 
 ### Hostnamen
 
@@ -47,13 +47,13 @@ Im Falle von Akamai durchläuft eine Anfrage die Regeln von unten nach oben. Sol
 
 #### Origin Server
 
-Als erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS" gewählt werden.
+Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS" gewählt werden.
 
 ![NetStorage](../assets/versuch2/akamai_property_config_settings_netstorage.png)
 
 #### Content Provider Code
 
-Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutz werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`MVS-Praktische-Übung-Property`). Dieser kann aus der Liste gewählt werden.
+Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutzt werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`MVS-Praktische-Übung-Property`). Dieser kann aus der Liste gewählt werden.
 
 ![CP-Code](../assets/versuch2/akamai_property_config_settings_cpcode.png)
 
@@ -70,11 +70,11 @@ Im Bereich Content Characteristics kann das CDN individuell auf die verwendeten 
 ![Content Characteristics](../assets/versuch2/akamai_property_config_settings_contentcharacteristics.png){ style="max-width:80%" }
 
 !!! question "Frage 1"
-    Recherchieren Sie, welche Firmen oder Standardisierungsgremien hinter den verschiedenen Streaming-Protokollen stehen. Welche Protokolle sind heute noch relevant? Nennen Sie beispielshaft einen Streaming-Anbieter und welches Protokoll dieser nutzt. (Quelle angeben)
+    Recherchieren Sie, welche Firmen oder Standardisierungsgremien hinter den verschiedenen Streaming-Protokollen stehen. Welche Protokolle sind heute noch relevant? Nennen Sie beispielhaft einen Streaming-Anbieter und welches Protokoll dieser nutzt. (Quelle angeben)
 
 #### Origin Base Path
 
-Zu letzt soll noch eine neue Eigenschaft zu der Regel hinzugefügt werden. Ganz unten über den Button "+ Behavior" kann dies getan werden.
+Zuletzt soll noch eine neue Eigenschaft zu der Regel hinzugefügt werden. Ganz unten über den Button "+ Behavior" kann dies getan werden.
 
 Hier soll die Eigenschaft "Origin Base Path" hinzugefügt werden.
 
@@ -100,7 +100,7 @@ Damit die erstellte Konfiguration an das CDN weitergegeben wird, muss diese akti
 
 ![Activation](../assets/versuch2/akamai_property_activation.png)
 
-Es kann zwischen der Aktivierung im "Staging Network" und im "Production Network" gewählt werden. Das "Staging Network" ist ein eigenes CDN mit angepassten Hostnamen um Änderungen ersteinmal testen zu können, bevor die Änderungen auf alle Nutzer angewendet werden. So können Fehler in der Konfiguration behoben werden, bevor es zu Ausfällen bei Nutzern kommt. Das "Production Network" ist das reguläre CDN über welches Nutzer die Medienstreams abrufen.
+Es kann zwischen der Aktivierung im "Staging Network" und im "Production Network" gewählt werden. Das "Staging Network" ist ein eigenes CDN mit angepassten Hostnamen, um Änderungen erst einmal testen zu können, bevor die Änderungen auf alle Nutzer angewendet werden. So können Fehler in der Konfiguration behoben werden, bevor es zu Ausfällen bei Nutzern kommt. Das "Production Network" ist das reguläre CDN über welches Nutzer die Medienstreams abrufen.
 
 Im Normalfall sollte die Konfiguration erst im Staging Network getestet werden. Da dies jedoch weitergehende Konfiguration zum Testen erfordert, soll ausnahmsweise die Konfiguration direkt im Produktionsnetz aktiviert werden. 
 
@@ -115,6 +115,6 @@ Ist die Aktivierung im Gange, wird eine Fortschrittsanzeige im Reiter "Activate"
 Der Vorgang der Aktivierung im Produktionsnetz dauert ca. 10 Minuten.
 
 !!! question "Frage 3"
-    Warum dauert eine Aktivierung solch eine lange Zeit?
+    Warum dauert die Propertyaktivierung eine so lange Zeit?
 
 Während die Aktivierung im Hintergrund durchgeführt wird, kann die Konfiguration der Testwerkzeuge vorgenommen werden.

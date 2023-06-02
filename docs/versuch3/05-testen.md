@@ -2,11 +2,11 @@
 
 Um die automatische Transcodierung zu testen, soll eine Datei aus dem mp4-Bucket "a--sourcefiles" mithilfe der S3 Weboberfläche in den Ingestordner kopiert werden. Danach sollte automatisch ein neuer Transcodierauftrag bei MediaConvert gestartet werden.
 
-Nach der Transcodierung kann auf dem FTP-Server nachgesehen werden, ob die Inhalte automatisch hochgeladen wurden. Das Abspielen kann wie in Versuch 2 mithilfe des HLS Players geschehen.
+Nach der Transcodierung kann auf dem FTP-Server nachgesehen werden, ob die Inhalte automatisch hochgeladen wurden. Das Abspielen kann wie in Versuch 2 mithilfe des HLS-Players geschehen.
 
 ## Eigene Transcodier-Vorlage
 
-Eigene Transcodier-Vorlagen können in der Mediaconvert GUI erstellt werden. Dazu muss in Mediaconvert der Punkt "Aufgabenvorlagen" gewählt werden. Hier kann unter "Vorlage erstellen" eine eigene Vorlage erstellt werden.
+Eigene Transcodiervorlagen können in der Mediaconvert GUI erstellt werden. Dazu muss in Mediaconvert der Punkt "Aufgabenvorlagen" gewählt werden. Hier kann unter "Vorlage erstellen" eine eigene Vorlage erstellt werden.
 
 ![MediaConvert Vorlagen](../assets/versuch3/mediaconvert_templates.png)
 
@@ -14,7 +14,7 @@ Zuerst muss der Name der Vorlage gewählt werden. Hierbei soll wieder der eigene
 
 ![MediaConvert Vorlage Name](../assets/versuch3/mediaconvert_template_name.png)
 
-Nun können unter "Eingaben" und "Ausgabegruppen" wie gewohnt die Transcodierungs-Einstellungen festgelegt werden.
+Nun können unter "Eingaben" und "Ausgabegruppen" wie gewohnt die Transcodierungseinstellungen festgelegt werden.
 
 !!! question "Frage 4"
     Wählen Sie eigene Transcodierungs-Einstellungen. Probieren Sie andere Codecs, Bitraten, Seitenverhältnisse oder Farbkorrekturen aus. Dabei sollen die gewählten Parameter beispielsweise auf bestimmte Geräte wie das eigene Handy zugeschnitten sein oder anderweitig von den bisherigen Transcodierungseinstellungen abweichen. Dokumentieren Sie im Bericht Ihre Wahl.

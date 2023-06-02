@@ -6,6 +6,8 @@ In Versuch 3 wurden die Grundprinzipien eines automatisieren Transcoding-Workflo
 
 In der Abgabe sollte mindestens ein Beispiel für transcodierte Dateien mit der gegebenen Vorlage und ein Beispiel für transcodierte Dateien mit der eigenen Vorlage enthalten sein. **Dabei müssen nicht alle Dateien in die Abgabe eingefügt werden, sondern jeweils nur die Index-Dateien und ein Segment jeder Qualitätsstufe.**
 
+Außerdem können die Lambdafunktionen CreateJob und UploadFile als .py-Datei abgegeben werden, falls sie nicht als Screenshot oder Text im Bericht enthalten sind.
+
 ```
 📁 Versuch 3
     📁 Standard Vorlage

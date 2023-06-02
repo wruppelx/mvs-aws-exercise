@@ -1,10 +1,10 @@
 # SNS
 
-Damit die Statusmeldungen per Mail versendet werden können muss ein Veröffentlichungs-Thema erstellt werden. Diesem Thema kann danach ein Abbonement hinzugefügt werden um die Nachrichten per Mail empfangen zu können.
+Damit die Statusmeldungen per Mail versendet werden können, muss ein Veröffentlichungsthema erstellt werden. Diesem Thema kann danach ein Abbonement hinzugefügt werden, um die Nachrichten per Mail empfangen zu können.
 
 ## Thema erstellen
 
-Über die Suchleiste, kann die Startseite von SNS geöffnet werden. Hier lässt sich im linken Menü der Punkt "Themen" auswählen. Hier werden alle erstellten Themen angezeigt. Um eine neues Thema zu erstellen, kann rechts oben "Thema erstellen" gewählt werden.
+Über die Suchleiste kann die Startseite von SNS geöffnet werden. Hier lässt sich im linken Menü der Punkt "Themen" auswählen. Hier werden alle erstellten Themen angezeigt. Um ein neues Thema zu erstellen, kann rechts oben "Thema erstellen" gewählt werden.
 
 ![SNS Themen](../assets/versuch3/sns_topics.png)
 
@@ -18,6 +18,6 @@ Ist das Thema erstellt, kann unten auf "Abonnement erstellen" ein Benachrichtigu
 
 ![SNS Neues Thema](../assets/versuch3/sns_newabo.png)
 
-Ist das Abonnement erstellt, wird eine Bestätigungsmail an die angegebene Adresse versendet. Über den Bestätigungslink muss das Abonnement bestätogt werden.
+Ist das Abonnement erstellt, wird eine Bestätigungsmail an die angegebene Adresse versendet. Über den Bestätigungslink muss das Abonnement bestätigt werden.
 
 ![SNS Abo Bestätigung](../assets/versuch3/sns_abosuccess.png)

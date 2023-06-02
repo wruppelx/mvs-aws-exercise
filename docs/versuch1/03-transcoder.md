@@ -1,6 +1,6 @@
 # AWS MediaConvert
 
-Um das Sample-Video zu transcodieren wird AWS Elemental MediaConvert verwendet. Dieser Service ist unter `Services -> Media Services -> MediaConvert` zu finden. Mit dem Klick auf *"Erste Schritte"* kann ein Transcoder-Auftrag erstellt werden. 
+Um das Sample-Video zu transcodieren, wird AWS Elemental MediaConvert verwendet. Dieser Service ist unter `Services -> Media Services -> MediaConvert` zu finden. Mit dem Klick auf *"Erste Schritte"* kann ein Transcoder-Auftrag erstellt werden. 
 
 Vorher sollte jedoch sicher gestellt werden, dass man sich in der Region Frankfurt (eu-central-1) befindet.
 
@@ -16,12 +16,12 @@ Hier wurden bereits die maximale Anzahl von 10 Warteschlangen erstellt. Welche W
 
 ## Transcodierauftrag erstellen
 
-Um eine Videodatei in ein anderes Format zu transcodieren muss ein Transcodierauftrag erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.
+Um eine Videodatei in ein anderes Format zu transcodieren, muss ein Transcodierauftrag erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.
 
 !!! warning "Achtung!"
     Der orangene Button "Erstellen" am unteren Ende der Seite erstellt und startet den Transcoding Job. Ist der Transcoding Job erstellt, können dessen Einstellungen nicht mehr geändert werden und es muss ein neuer Job mit den veränderten Einstellungen erstellt werden.
 
-    **Klicken Sie daher erst auf "Erstellen" wenn alle Transcodiereinstellungen festgelegt sind!**
+    **Klicken Sie daher erst auf "Erstellen", wenn alle Transcodiereinstellungen festgelegt sind!**
 
 ### Eingabe
 
@@ -55,7 +55,7 @@ Dafür können über den Button "Ausgabe hinzufügen" mehrere Ausgaben erstellt 
 
 #### Videoformat
 
-Durch das Klicken auf den Namen der jeweiligen Ausgabe (z.B. *"Output 1"*), werden die Codierungseinstellungen der jeweiligen Ausgabe geöffnet. Hier kann nun die gewünschte Auflösung, sowie der gewünschte Modus der Bitrate und die dazugehörigen Parameter eingestellt werden. Für alle Ausgaben soll eine feste Bitrate (CBR) verwendet werden.
+Durch das Klicken auf den Namen der jeweiligen Ausgabe (z.B. *"Output 1"*) werden die Codierungseinstellungen der jeweiligen Ausgabe geöffnet. Hier kann nun die gewünschte Auflösung sowie der gewünschte Modus der Bitrate und die dazugehörigen Parameter eingestellt werden. Für alle Ausgaben soll eine feste Bitrate (CBR) verwendet werden.
 
 Die Parameter Auflösung und Bitrate können aus der vorangegangenen Tabelle entnommen werden. Die Qualitätsoptimierungsebene soll auf "HQ mit einem Durchgang" gestellt werden.
 
@@ -66,7 +66,7 @@ Die Parameter Auflösung und Bitrate können aus der vorangegangenen Tabelle ent
 
 #### Timecode
 
-Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingbrannt" also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.
+Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingbrannt", also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.
 
 Als Präfix soll der eigene HDS-Nutzername mit einem Bindestrich gewählt (also `musterstudent - `) werden, sodass `musterstudent - 00:00:00:00` im oberen Bereich des Bildes zu sehen ist. Als Schriftgröße soll "Small" gewählt werden. Die Position soll nicht verändert werden. 
 
@@ -88,7 +88,7 @@ Berechtigungen und Rollen in AWS sind ein komplexeres Thema, das vor allem in Ve
 
 ### Warteschlange
 
-Als letzter Schritt muss im Menüpunkt "Aufgabenverwaltung" noch die eigene Warteschlange ausgewählt werden. Danach kann über den Button "Erstellen" der Transcodingauftrag erstellt und gestartet werden. Welche Warteschlange genutzt werden soll, steht in der Mail mit den Zugangsdaten, die jeder Studierende bekommen haben sollte.
+Als letzter Schritt muss im Menüpunkt "Aufgabenverwaltung" noch die eigene Warteschlange ausgewählt werden. Danach kann über den Button "Erstellen" der Transcodierauftrag erstellt und gestartet werden. Welche Warteschlange genutzt werden soll, steht in der Mail mit den Zugangsdaten, die jeder Studierende bekommen haben sollte.
 
 ![MediaConvert Warteschlange](../assets/versuch1/mediaconvert_job_queue.png)
 

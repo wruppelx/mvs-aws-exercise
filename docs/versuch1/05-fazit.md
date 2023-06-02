@@ -1,6 +1,6 @@
 # Fazit
 
-In Versuch 1 wurden die Grundprinzipien eines Cloud-Transcoders erläutert und ein erster Transcoder-Auftrag in AWS erstellt. Hierbei wurde eine Quelldatei mit hoher Bitrate in verschiedenen Distributionsformate für verschiedene Bandbreiten und Endgeräte konvertiert.
+In Versuch 1 wurden die Grundprinzipien eines Cloud-Transcoders erläutert und ein erster Transcoder-Auftrag in AWS erstellt. Hierbei wurde eine Quelldatei mit hoher Bitrate in verschiedene Distributionsformate für verschiedene Bandbreiten und Endgeräte konvertiert.
 
 Nach diesem Versuch sollten folgende Arbeitsabläufe klar sein:
 
@@ -11,7 +11,7 @@ Nach diesem Versuch sollten folgende Arbeitsabläufe klar sein:
 
 ## Abgabe
 
-In der Abgabe sollten die 3 transcodierten Dateien, die im Laufe des Versuchs erzeugt wurden, enthalten sein. Eigene Experimente mit kreativen Transcodier-Einstellungen sind gern gesehen und können ebenfalls abgegeben werden.
+In der Abgabe sollten die 3 transcodierten Dateien, die im Laufe des Versuchs erzeugt wurden, enthalten sein. Eigene Experimente mit kreativen Transcodiereinstellungen sind gern gesehen und können ebenfalls abgegeben werden.
 
 ```
 📁 Versuch 1
