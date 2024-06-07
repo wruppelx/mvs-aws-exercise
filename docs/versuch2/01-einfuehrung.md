@@ -49,9 +49,7 @@ Die Akamai WebGUI lässt sich über den Browser auf [control.akamai.com](https:/
 ![Akamai Login Maske](../assets/versuch2/akamai_login.png)
 
 !!! warning "Sicherheit"
-    Akamai pocht auf die Nutzung von Multi-Faktor-Authentifizierung. Falls Sie dies noch nicht bei Ihren privaten und geschäftlichen Accounts aktiviert haben, sollten Sie dies unbedingt tun und die Backup-Codes an einem sicheren Ort aufbewahren. Die Nutzung von 2-Faktor-Authentifizierung (2FA) via SMS ist nicht sicher.
-
-    Wenn bei der Anmeldung bei Akamai eine Warnung bezüglich 2FA auftaucht, können Sie für den Versuch getrost auf "Später einrichten" klicken. Außerhalb des Praktikums sollte 2FA aber auf jeden Fall aktiviert sein.
+    Akamai verlangt die Nutzung von Multi-Faktor-Authentifizierung. Bitet wählen Sie eines der angebotenen 2FA-Verfahren.
 
     ![Akamai 2FA](../assets/versuch2/akamai_2fa.png)
 
