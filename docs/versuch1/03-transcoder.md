@@ -39,7 +39,7 @@ Falls die Quelldatei vom Transcoder anders als in den Metadaten vermerkt interpr
 
 Im Bereich *Ausgabegruppen* kann ein oder mehrere Ausgabeformate festgelegt werden. Für diesen Versuch soll die Option *Dateigruppe* gewählt werden, da einzelne Ausgabedateien erzeugt werden sollen.
 
-Im Reiter *File Group* lässt sich nun unter anderem eine Zieladresse auswählen. Hier wählen wir den im letzten Kapitel angelegten S3-Ordner im eigenen S3-Bucket.
+Im Reiter *File Group* lässt sich nun unter anderem eine Zieladresse auswählen. Hier wählen wir den im letzten Kapitel angelegten S3-Ordner `Versuch1` im eigenen S3-Bucket.
 
 Für diesen Versuch soll die Quelldatei in folgende Formate transcodiert werden:
 
@@ -66,7 +66,7 @@ Die Parameter Auflösung und Bitrate können aus der vorangegangenen Tabelle ent
 
 #### Timecode
 
-Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingbrannt", also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.
+Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingebrannt", also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.
 
 Als Präfix soll der eigene HDS-Nutzername mit einem Bindestrich gewählt (also `musterstudent - `) werden, sodass `musterstudent - 00:00:00:00` im oberen Bereich des Bildes zu sehen ist. Als Schriftgröße soll "Small" gewählt werden. Die Position soll nicht verändert werden. 
 
