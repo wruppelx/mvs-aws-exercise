@@ -1,10 +1,10 @@
 # Einleitung
 
-Video-on-Demand-Systeme (VoD) sind aus dem alltäglichen Leben nicht wegzudenken - Youtube, Netflix und vielleicht sogar die ARD Mediathek. Der Aufbau eines VoD-Systems in der Cloud ist in den letzten Jahren denkbar einfach geworden. Cloud-Anbieter wie Amazon Web Services (AWS) und Akamai bieten verschiedene Werkzeuge an, um Medien zu ingestieren, zu speichern, zu konvertieren und letztendlich zu verbreiten.
+Video-on-Demand-Systeme (VoD) sind aus dem alltäglichen Leben nicht wegzudenken - Youtube, Netflix und die ARD/ZDF-Mediathek. Der Aufbau eines VoD-Systems in der Cloud ist in den letzten Jahren denkbar einfach geworden. Cloud-Anbieter wie Amazon Web Services (AWS) und Akamai bieten verschiedene Werkzeuge an, um Medien zu ingestieren, zu speichern, zu konvertieren und letztendlich zu verbreiten.
 
 ## Workflow
 
-Grundsätzlich folgt der Distributionsweg bei VoD-Systemen meist einem ähnlichen Ablauf. Mediendateien werden in hoher Qualität in das System eingespeist und nicht öffentlich gespeichert. Je nach Distributionsweg kann die Quelldatei in verschiedene Distributionsformate transcodiert werden, um auf verschiedenen Geräten wiedergegeben werden zu können. Die transcodierten Dateien können außerdem mit einem Kopierschutz versehen werden.
+Grundsätzlich folgt der Distributionsweg bei VoD-Systemen meist einem ähnlichen Ablauf: Die Quelldateien werden in hoher Qualität in das System eingespeist und nicht öffentlich gespeichert. Je nach Distributionsweg kann die Quelldatei in verschiedene Distributionsformate transcodiert werden, um auf verschiedenen Geräten wiedergegeben werden zu können. Die transcodierten Dateien können außerdem mit einem Kopierschutz versehen werden.
 
 Sind die verschiedenen Distributionspakete erstellt, können sie über ein Content-Delivery-Network (CDN) verteilt werden. Nutzer greifen dabei über eine Weboberfläche (Frontend) auf die im CDN gespeicherten Medien (Backend) zu.
 
