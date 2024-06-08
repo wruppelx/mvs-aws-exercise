@@ -50,7 +50,7 @@ def lambda_handler(event, context):
     s3 = boto3.client('s3')
     sns = boto3.client('sns')
 
-    topic_arn = 'xxxxxxxxx'
+    topic_arn = 'arn:aws:sns:xxxxxxxxx'
     queue= 'xxxxxxxxx'
 
     bucket = event['Records'][0]['s3']['bucket']['name']
