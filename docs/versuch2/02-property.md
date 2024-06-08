@@ -47,13 +47,13 @@ Im Falle von Akamai durchläuft eine Anfrage die Regeln von unten nach oben. Sol
 
 #### Origin Server
 
-Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS" gewählt werden.
+Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS2" gewählt werden.
 
 ![NetStorage](../assets/versuch2/akamai_property_config_settings_netstorage.png)
 
 #### Content Provider Code
 
-Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutzt werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`MVS-Praktische-Übung-Property`). Dieser kann aus der Liste gewählt werden.
+Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutzt werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`1640181 - mvs-upload`). Dieser kann aus der Liste gewählt werden.
 
 ![CP-Code](../assets/versuch2/akamai_property_config_settings_cpcode.png)
 
