@@ -62,7 +62,7 @@ def lambda_handler(event, context):
     username = bucket.replace("mvs-", "") + " - "
 
     try:
-        file = s3.get_object(Bucket=bucket, Key="hls_template.json")
+        file = s3.get_object(Bucket=bucket, Key="templates/hls_template.json")
     except:
         status = "An exception occured while downloading the transcoding template"
         sns.publish(TopicArn=topic_arn, Message=status)
