@@ -139,7 +139,7 @@ import json
 from ftplib import FTP
 import boto3
 
-FTP_HOST = 'mvs.ftp.upload.akamai.com'
+FTP_HOST = 'mvs2.ftp.upload.akamai.com'
 FTP_USER = 'musterstudent'
 FTP_PWD = 'xxxxxxxxxxxx'
 
