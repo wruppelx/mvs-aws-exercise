@@ -1,7 +1,7 @@
 # Testen
 
 ## Test mit der erzeugten Transcodiervorlage
-Um die automatische Transcodierung zu testen, soll eine Datei aus dem mp4-Bucket "a--sourcefiles" mithilfe der S3 Weboberfläche in den Ingestordner kopiert werden. Danach sollte automatisch ein neuer Transcodierauftrag bei MediaConvert gestartet werden.
+Um die automatische Transcodierung zu testen, soll eine mp4-Datei aus dem S3-Bucket "a--sourcefiles" mithilfe der S3 Weboberfläche in den Ingestordner kopiert werden. Danach sollte automatisch ein neuer Transcodierauftrag bei MediaConvert gestartet werden.
 
 Nach der Transcodierung kann auf dem FTP-Server nachgesehen werden, ob die Inhalte automatisch hochgeladen wurden. Das Abspielen kann wie in Versuch 2 mithilfe des HLS-Players geschehen.
 
