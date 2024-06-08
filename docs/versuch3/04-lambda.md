@@ -51,7 +51,7 @@ def lambda_handler(event, context):
     sns = boto3.client('sns')
 
     topic_arn = 'arn:aws:sns:xxxxxxxxx'
-    queue= 'xxxxxxxxx'
+    queue= 'arn:aws:mediaconvert:eu-central-1:757773874047:queues/Default'
 
     bucket = event['Records'][0]['s3']['bucket']['name']
     media_key = event['Records'][0]['s3']['object']['key']
