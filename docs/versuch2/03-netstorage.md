@@ -1,6 +1,7 @@
 # NetStorage
 
-Wie in den Property-Einstellungen schon festgelegt, sollen die Quelldaten von einem NetStorage Origin Server abgerufen werden. Um die Internetverbindung der Hochschule nicht allzu sehr zu belasten, wurde ein HLS-Clip schon auf NetStorage hochgeladen. Für jeden Teilnehmer des Praktikums steht ein eigene Ordner zur Verfügung. Hier können auch nach Belieben eigene Daten hinzugefügt werden.
+Wie in den Property-Einstellungen schon festgelegt, sollen die Quelldaten von einem NetStorage Origin Server abgerufen werden. Für jeden Teilnehmenden an der AWS-Übung steht ein eigene Ordner zur Verfügung.  Für Versuch 2 wurde bereits ein HLS-Clip  auf NetStorage hochgeladen. 
+Eigene Daten können nach Belieben hinzugefügt werden. (Hinweis: In Versuch 3 Werden Sie dann über AWS MediaConvert erzeugte Streaming-Inhalte automatisiert auf NetStorage kopieren).
 
 ## Zugriff
 
@@ -33,5 +34,5 @@ Im rechten Bereich befindet sich das Dateisystem auf der Serverseite.
 Der Fortschritt der Übertragung wird im unteren Bereich angezeigt.
 
 !!! question "Frage 4"
-    Dokumentieren Sie, welche Dateien bereits in Ihrem Ordner vorhanden sind. Finden Sie außerdem die Playlist-Dateien für den gesamten Clip sowie die einzelnen Qualitätsstufen.
+    Dokumentieren Sie, welche Manifest-Dateien (*.m3u8) für den gesamten Clip sowie die einzelnen Qualitätsstufen bereits in Ihrem Ordner vorhanden sind.
 
