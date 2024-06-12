@@ -53,7 +53,7 @@ Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehe
 
 #### Content Provider Code
 
-Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutzt werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`1640181 - mvs-upload`). Dieser kann aus der Liste gewählt werden.
+Der Content Provider Code erleichtert das Abrechnen der Kosten, wenn viele verschiedene CDNs und Produkte genutzt werden. Für diesen Versuch wurde bereits ein CP-Code erstellt (`1652421 - mvs-aws-versuch`). Dieser kann aus der Liste gewählt werden.
 
 ![CP-Code](../assets/versuch2/akamai_property_config_settings_cpcode.png)
 
