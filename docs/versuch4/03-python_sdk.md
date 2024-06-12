@@ -44,7 +44,7 @@ Als Key soll folgende Struktur genutzt werden:
 lambda q: (q['Key1'], q['key2'])
 ```
 
-Dabei sind `Key1` und `Key2` die Eigenschaften der Warteschlange, anhand der sortiert werden soll. Die Liste wird erst anhand von Key1 und danach anhand von Key2 sortiert. 
+Dabei sind `Key1` und `Key2` die Eigenschaften der Warteschlange, anhand der sortiert werden soll. Die Liste wird erst anhand von Key1 und danach anhand von Key2 sortiert. Wählen Sie als Key1 die Eigenschaft (siehe oben) für die aktuelle Anzahl der Jobs in der Queue und als Key2 die Eigenschaft für die Anzahl der aktuell bearbeiteten Jobs.
 
 #### 3. Warteschlange zuweisen
 
