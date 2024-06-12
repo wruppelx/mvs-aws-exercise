@@ -24,21 +24,18 @@ Die Fragen sind in der Versuchsanleitung folgendermaßen gekennzeichnet:
 
 ### Abgabeort
 
-Die Abgabe erfolgt via ILIAS. Der Versuchsbericht soll nach dem folgenden Schema benannt sein: 
+Die Abgabe des Versuchsberichtes erfolgt via ILIAS. Der Versuchsbericht soll nach dem folgenden Schema benannt sein: 
 
 `[Matrikelnummer] - [Nachname]_[Vorname] - Versuchsbericht.pdf`
 
-Außerdem sollen die abzugebenden Dateien in einer ZIP-gepackten-Datei hochgeladen werden. Pro Versuch soll in der ZIP-Datei ein eigener Ordner erstellt werden. Die ZIP-Datei soll nach folgendem Schema benannt sein: 
+Die abzugebenden Dateien sollen in Ihr S3-Bucket hochgeladen werden. Pro Versuch soll für die Abgaben ein eigener Ordner erstellt werden. 
 
-`[Matrikelnummer] - [Nachname]_[Vorname] - Versuchsdateien.zip`
-
-Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werden müssen. Eigene Experimente mit z.B. kreativen Kodiereinstellungen etc. sind erwünscht und können ebenfalls abgegeben werden.
+Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werden müssen. Eigene Experimente mit z.B. kreativen Kodiereinstellungen etc. sind erwünscht. Wenn weitere Dateien auf S3 verbleiben, kopieren Sie diese bitte in einen Unterordner "Experimente" und können ebenfalls abgegeben werden.
 
 <u>Beispiel:</u>
 
 ```
-📄 12345 - Mustermann_Max - Versuchsbericht.pdf
-📁 12345 - Mustermann_Max - Versuchsdateien.zip
+📁 
     📁 Versuch 1
         📄 Clip1_720p.mp4
         ...
@@ -53,7 +50,7 @@ Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werde
 
 ### Bewertungskriterien
 
-Zur Bewertung wird sowohl der Versuchsbericht, als auch die beantworteten Fragen sowie die abgegebenen Dateien herangezogen. Neben faktischer Korrektheit sollte ebenfalls auf die Rechtschreibung und Form (z.B. Quellenangaben) geachtet werden.
+Zur Bewertung werden sowohl der Versuchsbericht, als auch die beantworteten Fragen sowie die abgegebenen Dateien herangezogen. Neben faktischer Korrektheit sollte ebenfalls auf die Rechtschreibung und Form (z.B. Quellenangaben) geachtet werden.
 
 ## Benötigte Software
 
