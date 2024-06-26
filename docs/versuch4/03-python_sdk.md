@@ -94,7 +94,7 @@ Der Name des Buckets sowie der Key der Datei muss individuell abgeändert werden
 Ist das Testereignis erstellt, kann es über den Test-Button ausgelöst werden.
 
 !!! question "Frage 4"
-    Lösen Sie das Testereignis aus und dokumentieren Sie das Ergebnis. Im Bereich "Function Logs" wird die Job-ID angezeigt. Im Service MediaConvert fonden Sie unter Ihrer Job-ID die verwendete Warteschlange. Dokumentieren Sie bitte Job-ID udn verwendete Warteschlange.
+    Lösen Sie das Testereignis aus und dokumentieren Sie das Ergebnis. Im Bereich "Function Logs" wird die Job-ID angezeigt. Im Service MediaConvert finden Sie unter Ihrer Job-ID die verwendete Warteschlange. Dokumentieren Sie bitte die Job-ID und die verwendete Warteschlange.
 
 ### Volle Warteschlangen simulieren
 
