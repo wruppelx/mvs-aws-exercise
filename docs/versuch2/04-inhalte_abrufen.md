@@ -14,7 +14,7 @@ Zum Testen der HLS-Funktionalität soll die Demo-Instanz von hls.js genutzt werd
 
 ![hls.js](../assets/versuch2/hls_js.png)
 
-Standardmäßig ist in der Widergabe-URL ein Testvideo eingetragen. Hier soll die Akamai-URL der `.m3u8`-Datei ohne ein Qualitätssufix wie `_720p` eingetragen werden. Die URL besteht aus der Basis-URL (`http://username.mdc.akamaized.net/`) und dem Pfad zur entsprechenden HLS-Playlist-Datei (z.B. `bbb/playlist.m3u8`).
+Standardmäßig ist in der Wiedergabe-URL ein Testvideo eingetragen. Hier soll die Akamai-URL der `.m3u8`-Datei ohne ein Qualitätssufix wie `_720p` eingetragen werden. Die URL besteht aus der Basis-URL (`http://username.mdc.akamaized.net/`) und dem Pfad zur entsprechenden HLS-Playlist-Datei (z.B. `ftp_source/playlist.m3u8`).
 
 !!! warning "Kompatibilität"
     Denken Sie daran, den Ordner, in der sich die Playlist-Datei befindet, auch mit anzugeben.

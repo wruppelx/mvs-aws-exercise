@@ -48,10 +48,11 @@ Dabei sind `Key1` und `Key2` die Eigenschaften der Warteschlange, anhand der sor
 
 #### 3. Warteschlange zuweisen
 
-Um die Warteschlange dem Transcoding-Job zuzuweisen, kann die Variable `queue` mit der ARN der am höchsten stehenden Warteschlange überschrieben werden.
+Um die Warteschlange dem Transcoding-Job zuzuweisen, kann die Variable `queue` mit der ARN der am höchsten stehenden Warteschlange überschrieben werden. Der `print`-Befehl schreibt die gewählte Queue in den CloudWatch-Log.
 
 ```
 queue = sorted_queues[0]['Arn']
+print(f"Gewaehlte Queue: {queue}")
 ```
 
 !!! question "Frage 3"

@@ -95,9 +95,11 @@ def lambda_handler(event, context):
     print("Job-ID: " + response['Job']['Id'])
 ```
 
-Damit die Transcoding-Aufträge in der richtigen Warteschlange landen und die Ergebnisse in das richtige SNS Thema veröffentlicht werden, müssen diese Punkte im Code modifiziert werden.
+Damit die Transcoding-Aufträge in der richtigen Warteschlange landen und die Ergebnisse in das richtige SNS Thema veröffentlicht werden, müssen die folgenden Punkte im Code modifiziert werden:
 
-In Zeile 9 muss die topic_arn durch das eigene Thema aus SNS ersetzt werden. Die topic_arn findet man in der Themenübersicht in der Liste in der Spalte "ARN". In Zeile 10 muss außerdem die Warteschlange eingetragen werden. Dabei kann einfach "Default" durch die entsprechende Warteschlange ersetzt werden. Es soll die gleiche Warteschlange wie in Versuch 1 genutzt werden, die auch in der Mail mit den Zugangsdaten zu finden ist.
+In Zeile 9 muss die topic_arn durch das eigene Thema aus SNS ersetzt werden. Die topic_arn findet man in der Themenübersicht in der Liste in der Spalte "ARN". 
+
+In Zeile 10 muss außerdem die Warteschlange eingetragen werden. Dabei kann einfach "Default" durch die entsprechende Warteschlange ersetzt werden. Es soll die gleiche Warteschlange wie in Versuch 1 genutzt werden, die auch in der Mail mit den Zugangsdaten zu finden ist.
 
 Ist der Code hinzugefügt und modifiziert, kann die Lambdafunktion mithilfe des Buttons "Deploy" aktualisiert werden.
 
@@ -139,7 +141,7 @@ import json
 from ftplib import FTP
 import boto3
 
-FTP_HOST = 'mvs2.ftp.upload.akamai.com'
+FTP_HOST = 'mvs.ftp.upload.akamai.com'
 FTP_USER = 'musterstudent'
 FTP_PWD = 'xxxxxxxxxxxx'
 

@@ -16,12 +16,12 @@ Hier wurden bereits die maximale Anzahl von 10 Warteschlangen erstellt. Welche W
 
 ## Transcodierauftrag erstellen
 
-Um eine Videodatei in ein anderes Format zu transcodieren, muss ein Transcodierauftrag erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.
+Um eine Videodatei in ein anderes Format zu transcodieren, muss ein Transcodierauftrag (Transcoding Job)  erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.
 
 !!! warning "Achtung!"
     Der orangene Button "Erstellen" am unteren Ende der Seite erstellt und startet den Transcoding Job. Ist der Transcoding Job erstellt, können dessen Einstellungen nicht mehr geändert werden und es muss ein neuer Job mit den veränderten Einstellungen erstellt werden.
 
-    **Klicken Sie daher erst auf "Erstellen", wenn alle Transcodiereinstellungen festgelegt sind!**
+    **Klicken Sie daher erst auf "Erstellen", wenn alle Transcodiereinstellungen (das sind die folgenden Abschnitte Eingabe, Ausgabe, Berechtigungen und Rollen, Warteschlange) festgelegt sind!**
 
 ### Eingabe
 
@@ -29,7 +29,7 @@ Zuerst muss die Quelldatei bestimmt werden. Im Feld der Eingabedatei-URL kann ma
 
 ![MediaConvert Neuer Auftrag](../assets/versuch1/mediaconvert_new_job.png)
 
-Da die Quelldateien bereits im Bucket `a--sourcefiles` abgelegt wurden, kann dieser durch den Button "Durchsuchen" ausgewählt werden. Sobald man das Suchfeld "Datei" auswählt, werden die verfügbaren Dateien angezeigt. Hier muss die Composition Playlist (CPL) ausgewählt werden, damit MediaConvert die Quelldaten als MXF einlesen kann. Für diesen ersten Versuch soll die CPL-Datei mit dem Präfix `QUELLDATEI-VERSUCH1/` gewählt werden.
+Da die Quelldateien bereits im Bucket `a--sourcefiles` abgelegt wurden, kann dieser durch den Button "Durchsuchen" ausgewählt werden. Sobald man das Suchfeld "Datei" auswählt, werden die verfügbaren Dateien angezeigt. Hier muss die Composition Playlist (CPL) ausgewählt werden, damit MediaConvert die Quelldaten als MXF einlesen kann. Für diesen ersten Versuch soll die CPL-Datei aus dem Ordner `IMFs/BBB-MVS-20221202/` gewählt werden.
 
 ![MediaConvert CPL](../assets/versuch1/mediaconvert_cpl.png)
 
