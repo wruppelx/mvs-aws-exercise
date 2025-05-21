@@ -11,7 +11,7 @@ Als CDN-Anbieter wird Akamai genutzt. Akamai ist einer der global größten Anbi
 Ebenso wie AWS lässt sich Akamai über eine [Weboberfläche](https://control.akamai.com) oder die API bedienen. In diesem Versuch wird die Weboberfläche genutzt.
 
 !!! warning "Kosten"
-    Wie auch bei AWS werden die Kosten anhand des Aufwandes berechnet. Beim CDN entstehen die meisten Kosten durch die Datenmenge, die summiert an Nutzer übertragen wurde. Für den Versuch wurde uns ein freies Kontingent von 2 Petabyte zur Verfügung gestellt.
+    Wie auch bei AWS werden die Kosten anhand des Aufwandes berechnet. Beim CDN entstehen die meisten Kosten durch die Datenmenge, die summiert an Nutzer übertragen wurde. Für den Versuch wurde uns ein begrenztes freies Kontingent zur Verfügung gestellt.
 
 ### Akamai Adaptive Media Delivery (*AMD*)
 
