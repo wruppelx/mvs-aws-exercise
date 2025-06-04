@@ -1,0 +1,1360 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://wruppelx.github.io/mvs-aws-exercise/versuch1/03-transcoder/">
+      
+      
+        <link rel="prev" href="../02-S3/">
+      
+      
+        <link rel="next" href="../04-download/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>AWS MediaConvert - Video-on-Demand (AWS/Akamai)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aws-mediaconvert" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Video-on-Demand (AWS/Akamai)" class="md-header__button md-logo" aria-label="Video-on-Demand (AWS/Akamai)" data-md-component="logo">
+      
+  <img src="../../assets/logo_hsrm_weiss.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Video-on-Demand (AWS/Akamai)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS MediaConvert
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Umschalten zu Lightmode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Umschalten zu Lightmode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Umschalten zu Darkmode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Umschalten zu Darkmode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wruppelx/mvs-aws-exercise" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Video-on-Demand (AWS/Akamai)" class="md-nav__button md-logo" aria-label="Video-on-Demand (AWS/Akamai)" data-md-component="logo">
+      
+  <img src="../../assets/logo_hsrm_weiss.svg" alt="logo">
+
+    </a>
+    Video-on-Demand (AWS/Akamai)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wruppelx/mvs-aws-exercise" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../einleitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einleitung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Versuch 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Versuch 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-einfuehrung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung Versuch 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-S3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AWS S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    AWS MediaConvert
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    AWS MediaConvert
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#warteschlange" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warteschlange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transcodierauftrag-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcodierauftrag erstellen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcodierauftrag erstellen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eingabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eingabe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ausgabe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ausgabe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videoformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videoformat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timecode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timecode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audioformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audioformat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berechtigungen-und-rolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Berechtigungen und Rolle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warteschlange_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warteschlange
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uberwachung-des-transcodierauftrages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Überwachung des Transcodierauftrages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-fazit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fazit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Versuch 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Versuch 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch2/01-einfuehrung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung Versuch 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch2/02-property/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Property
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch2/03-netstorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Netstorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch2/04-inhalte_abrufen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inhalte Abrufen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch2/05-fazit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fazit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Versuch 3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Versuch 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/01-einfuehrung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung Versuch 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/02-s3_vorbereitungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    S3 Vorbereitungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/03-sns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/04-lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/05-testen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/06-fazit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fazit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch3/07-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Versuch 4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Versuch 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch4/01-einfuehrung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung Versuch 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch4/02-cloudshell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CloudShell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch4/03-python_sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python SDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch4/04-fazit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fazit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versuch4/05-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aws-mediaconvert">AWS MediaConvert</h1>
+<p>Um das Sample-Video zu transcodieren, wird AWS Elemental MediaConvert verwendet. Dieser Service ist unter <code>Services -&gt; Media Services -&gt; MediaConvert</code> zu finden. Mit dem Klick auf <em>"Erste Schritte"</em> kann ein Transcoder-Auftrag erstellt werden. </p>
+<p>Vorher sollte jedoch sicher gestellt werden, dass man sich in der Region Frankfurt (eu-central-1) befindet.</p>
+<p><img alt="MediaConvert Region" src="../../assets/versuch1/mediaconvert_region.png" /></p>
+<h2 id="warteschlange">Warteschlange</h2>
+<p>Da auch bei MediaConvert die Aufträge von anderen IAM-Benutzern angezeigt werden, lohnt sich der Übersicht halber die Einordnung in Warteschlangen. Der Bereich "Warteschlangen" lässt sich über die Seitenleiste aufrufen.</p>
+<p><img alt="AWS Elemental MediaConvert Warteschlangen" src="../../assets/versuch1/mediaconvert_queue.png" /></p>
+<p>Hier wurden bereits die maximale Anzahl von 10 Warteschlangen erstellt. Welche Warteschlange genutzt werden soll, wurde in der Mail mit den Zugangsdaten mitgeteilt.</p>
+<h2 id="transcodierauftrag-erstellen">Transcodierauftrag erstellen</h2>
+<p>Um eine Videodatei in ein anderes Format zu transcodieren, muss ein Transcodierauftrag (Transcoding Job)  erstellt werden. Hier werden unter anderem die Transcodierparameter sowie der Ein- und Ausgabepfad festgelegt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Achtung!</p>
+<p>Der orangene Button "Erstellen" am unteren Ende der Seite erstellt und startet den Transcoding Job. Ist der Transcoding Job erstellt, können dessen Einstellungen nicht mehr geändert werden und es muss ein neuer Job mit den veränderten Einstellungen erstellt werden.</p>
+<p><strong>Klicken Sie daher erst auf "Erstellen", wenn alle Transcodiereinstellungen (das sind die folgenden Abschnitte Eingabe, Ausgabe, Berechtigungen und Rollen, Warteschlange) festgelegt sind!</strong></p>
+</div>
+<h3 id="eingabe">Eingabe</h3>
+<p>Zuerst muss die Quelldatei bestimmt werden. Im Feld der Eingabedatei-URL kann manuell eine öffentliche S3-, HTTP- oder HTTPS-URL angegeben werden oder durch die Schaltfläche <em>Durchsuchen</em> eine Datei in den eigenen S3-Buckets ausgewählt werden. </p>
+<p><img alt="MediaConvert Neuer Auftrag" src="../../assets/versuch1/mediaconvert_new_job.png" /></p>
+<p>Da die Quelldateien bereits im Bucket <code>a--sourcefiles</code> abgelegt wurden, kann dieser durch den Button "Durchsuchen" ausgewählt werden. Sobald man das Suchfeld "Datei" auswählt, werden die verfügbaren Dateien angezeigt. Hier muss die Composition Playlist (CPL) ausgewählt werden, damit MediaConvert die Quelldaten als MXF einlesen kann. Für diesen ersten Versuch soll die CPL-Datei aus dem Ordner <code>IMFs/BBB-MVS-20221202/</code> gewählt werden.</p>
+<p><img alt="MediaConvert CPL" src="../../assets/versuch1/mediaconvert_cpl.png" /></p>
+<p>Falls die Quelldatei vom Transcoder anders als in den Metadaten vermerkt interpretiert werden soll, kann diese Auswahl ebenfalls im Bereich <em>Eingaben</em> getroffen werden. Für diesen Versuch müssen diese Einstellungen jedoch nicht verändert werden.</p>
+<h3 id="ausgabe">Ausgabe</h3>
+<p>Im Bereich <em>Ausgabegruppen</em> kann ein oder mehrere Ausgabeformate festgelegt werden. Für diesen Versuch soll die Option <em>Dateigruppe</em> gewählt werden, da einzelne Ausgabedateien erzeugt werden sollen.</p>
+<p>Im Reiter <em>File Group</em> lässt sich nun unter anderem eine Zieladresse auswählen. Hier wählen wir den im letzten Kapitel angelegten S3-Ordner <code>Versuch1</code> im eigenen S3-Bucket.</p>
+<p>Für diesen Versuch soll die Quelldatei in folgende Formate transcodiert werden:</p>
+<table>
+<thead>
+<tr>
+<th>Auflösung</th>
+<th>Video Bitrate</th>
+<th>Audio Bitrate</th>
+<th>Namensmodifikator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1920x1080</td>
+<td>5 Mbit/s</td>
+<td>192 Kbit/s</td>
+<td><code>_1080p</code></td>
+</tr>
+<tr>
+<td>1280x720</td>
+<td>2,5 Mbit/s</td>
+<td>128 Kbit/s</td>
+<td><code>_720p</code></td>
+</tr>
+<tr>
+<td>848x480</td>
+<td>1 Mbit/s</td>
+<td>96 Kbit/s</td>
+<td><code>_480p</code></td>
+</tr>
+</tbody>
+</table>
+<p>Dafür können über den Button "Ausgabe hinzufügen" mehrere Ausgaben erstellt werden und Namensmodifikatoren vergeben werden. Diese Modifikatoren werden an den Dateinamen der transcodierten Dateien angehängt.</p>
+<p><img alt="MediaConvert File Group" src="../../assets/versuch1/mediaconvert_output.png" /></p>
+<h4 id="videoformat">Videoformat</h4>
+<p>Durch das Klicken auf den Namen der jeweiligen Ausgabe (z.B. <em>"Output 1"</em>) werden die Codierungseinstellungen der jeweiligen Ausgabe geöffnet. Hier kann nun die gewünschte Auflösung sowie der gewünschte Modus der Bitrate und die dazugehörigen Parameter eingestellt werden. Für alle Ausgaben soll eine feste Bitrate (CBR) verwendet werden.</p>
+<p>Die Parameter Auflösung und Bitrate können aus der vorangegangenen Tabelle entnommen werden. Die Qualitätsoptimierungsebene soll auf "HQ mit einem Durchgang" gestellt werden.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Die Bitrate wird bei AWS in Bit/s und nicht in <strong>M</strong>bit/s angegeben. Eine Umrechnung ist notwendig.</p>
+</div>
+<p><img alt="MediaConvert Videosettings" src="../../assets/versuch1/mediaconvert_video.png" /></p>
+<h4 id="timecode">Timecode</h4>
+<p>Bei den erstellten Dateien soll der Timecode als Wasserzeichen in das Video "eingebrannt", also fest in das Video codiert werden. Dafür muss in den Videocodier-Einstellungen ganz unten der Bereich "Vorverarbeitung" ausgeklappt und die Option "Timecode einbrennen" aktiviert werden. Die Bemerkung "Pro" neben der Option signalisiert, dass sich durch das Aktivieren der Option die Transcodiergebühren erhöhen.</p>
+<p>Als Präfix soll der eigene HDS-Nutzername mit einem Bindestrich gewählt (also <code>musterstudent -</code>) werden, sodass <code>musterstudent - 00:00:00:00</code> im oberen Bereich des Bildes zu sehen ist. Als Schriftgröße soll "Small" gewählt werden. Die Position soll nicht verändert werden. </p>
+<p><img alt="MediaConvert Timecode" src="../../assets/versuch1/mediaconvert_timecode.png" /></p>
+<h4 id="audioformat">Audioformat</h4>
+<p>Durch die Auswahl <em>"Audio 1"</em> statt "Video" kann auch die Audiocodierung verändert werden. Standardmäßig wird "Fortgeschrittene Audiocodierung" (Advanced Audio Coding / AAC) verwendet, es können jedoch auch verschiedene Dolby-Codecs ausgewählt werden.</p>
+<p>Hier muss nur die Audiobitrate anhand der Tabelle eingestellt werden. Soll ein anderes Format als Stereo verwendet werden, kann dies ebenfalls hier konfiguriert werden.</p>
+<p><img alt="MediaConvert Audiosettings" src="../../assets/versuch1/mediaconvert_audio.png" /></p>
+<h3 id="berechtigungen-und-rolle">Berechtigungen und Rolle</h3>
+<p>Berechtigungen und Rollen in AWS sind ein komplexeres Thema, das vor allem in Versuch 3 wichtig wird. Für diesen Versuch ist nur wichtig, dass die richtige Rolle für den Transcodierauftrag gewählt wird. Dazu wählt man im linken Menü den Punkt "AWS-Integration" und kontrolliert, ob die "MediaConvert_Default_Role" ausgewählt ist.</p>
+<p><img alt="MediaConvert Rolle" src="../../assets/versuch1/mediaconvert_role.png" /></p>
+<h3 id="warteschlange_1">Warteschlange</h3>
+<p>Als letzter Schritt muss im Menüpunkt "Aufgabenverwaltung" noch die eigene Warteschlange ausgewählt werden. Danach kann über den Button "Erstellen" der Transcodierauftrag erstellt und gestartet werden. Welche Warteschlange genutzt werden soll, steht in der Mail mit den Zugangsdaten, die jeder Studierende bekommen haben sollte.</p>
+<p><img alt="MediaConvert Warteschlange" src="../../assets/versuch1/mediaconvert_job_queue.png" /></p>
+<h2 id="uberwachung-des-transcodierauftrages">Überwachung des Transcodierauftrages</h2>
+<p>Ist der Auftrag erstellt, erfolgt eine Weiterleitung auf die "Aufgabenübersicht" des erstellten Auftrags, in der der aktuelle Stand des Auftrags angezeigt wird. Ist der Auftrag eingegangen, wird <code>SUBMITTED</code> im Status angezeigt. Die Aufgabenübersicht wird nicht automatisch aktualisiert und muss daher manuell über den Button "Aktualisieren" auf den aktuellen Stand gebracht werden.</p>
+<div class="admonition question">
+<p class="admonition-title">Frage 3</p>
+<p>Wie lange dauerte der Transcodiervorgang?</p>
+</div>
+<p><img alt="MediaConvertJob Submitted" src="../../assets/versuch1/mediaconvert_job_submitted.png" /></p>
+<p>Wird der Auftrag bearbeitet, lautet der Status <code>PROGRESSING</code>.</p>
+<p><img alt="MediaConvert Job Progressing" src="../../assets/versuch1/mediaconvert_job_progressing.png" /></p>
+<p>Ist der Auftrag erledigt, wird der Status <code>COMPLETE</code> angezeigt.</p>
+<p><img alt="MediaConvert Job Completed" src="../../assets/versuch1/mediaconvert_job_complete.png" /></p>
+<p>Der Job kann auch in der Übersicht der Aufgaben angezeigt werden. Hier kann nach der Warteschlange gefiltert werden, um eine übersichtliche Darstellung zu generieren.</p>
+<p><img alt="MediaConvert Job Übersicht" src="../../assets/versuch1/mediaconvert_job_overview.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="../02-S3/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: AWS S3">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                AWS S3
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-download/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Download">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Download
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
