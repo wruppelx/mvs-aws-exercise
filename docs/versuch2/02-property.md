@@ -47,7 +47,7 @@ Im Falle von Akamai durchläuft eine Anfrage die Regeln von unten nach oben. Sol
 
 #### Origin Server
 
-Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS2" gewählt werden.
+Als Erstes muss der Origin Server festgelegt werden. Hier soll der schon bestehende NetStorage Account "MVS" ausgewählt werden. (Der Name "MVS" kann in Ihrem Semester etwas anders lauten, z.B. MVS2)
 
 ![NetStorage](../assets/versuch2/akamai_property_config_settings_netstorage.png)
 

@@ -29,7 +29,9 @@ http://musterstudent.mdc.akamaized.net/bbb/CPL_xxxxx.m3u8
 
 Das Laden von HTTP Inhalten auf einer HTTPS Website ist standardmäßig deaktiviert. Dies lässt sich jedoch temporär überbrücken. Am einfachsten ist dies mithilfe von Firefox möglich: [https://support.mozilla.org/en-US/kb/mixed-content-blocking-firefox](https://support.mozilla.org/en-US/kb/mixed-content-blocking-firefox)
 
-Dazu wurf man den HLS-Player auf, gibt den Link zur Playlist ein und drückt enter. Danach klickt man auf das Schloss in der URL-Leiste in Firefox. Danach klickt man auf "Verbindung ist sicher" und klickt auf "Schutz momentan deaktiveren"
+Dazu ruft man den HLS-Player auf, gibt den Link zur Playlist ein und drückt enter. Danach klickt man auf das Schloss in der URL-Leiste in Firefox. Danach klickt man auf "Verbindung ist sicher" und klickt auf "Schutz momentan deaktiveren".
+Bei neueren (05/25) Firefox-Versionen scheint das nciht mehr zu funktionieren.
+Weitere Möglichkeit: In der Firefox-Adresszeile `about:config`eingeben. Dann die Option `security.mixed_content.block_active_content` auf `false` setzen und die HLS-Player-Seite neu laden.
 
 ![Mixed Content](../assets/versuch2/mixed-content.png)
 
