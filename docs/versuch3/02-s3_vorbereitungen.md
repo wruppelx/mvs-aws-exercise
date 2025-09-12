@@ -18,7 +18,7 @@ Wiederholen Sie den Vorgang, bis alle drei Ordner erstellt sind.
 
 ## Transcodiervorlage hinzufügen
 
-Für die automatische Transcodierung muss MediaConvert mitgeteilt werden, welche Transcodierparameter gewählt werden sollen. Dies geschieht über Vorlage im JSON-Format. Ein Beispiel für diese Vorlage steht in `a--sourcefiles` zur Verfügung und soll in den Ordner `templates` kopiert werden.
+Für die automatische Transcodierung muss MediaConvert mitgeteilt werden, welche Transcodierparameter gewählt werden sollen. Dies geschieht über eine Vorlage im JSON-Format. Ein Beispiel für diese Vorlage steht in `a--sourcefiles` zur Verfügung und soll in den Ordner `templates` kopiert werden.
 
 !!! question "Frage 1"
     Laden Sie die JSON Vorlage herunter und öffnen Sie diese in einem Texteditor. Welche Auflösungen werden durch diese Vorlage erzeugt? Welche durchschnittlichen und maximalen Video-Bitraten besitzen die Auflösungen jeweils?
