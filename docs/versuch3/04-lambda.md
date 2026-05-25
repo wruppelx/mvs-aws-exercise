@@ -1,8 +1,6 @@
-# Lambda
+# Lambda Funktion `CreateJob`
 
-## Funktion 1: CreateJob
-
-Die erste Funktion soll, wenn neue Dateien dem `ingest`-Ordner hinzugefügt werden, einen entsprechenden Transcodierauftrag erstellen und im Anschluss eine Statusmeldung via SNS versenden.
+Die Lambda-Funktion soll, wenn neue Dateien dem `ingest`-Ordner hinzugefügt werden, einen entsprechenden Transcodierauftrag erstellen und im Anschluss eine Statusmeldung via SNS versenden.
 
 Dazu soll über das linke Menü der Punkt "Funktionen" angeklickt und auf der Übersicht der Funktionen auf "Funktion erstellen" klicken. Der Funktionsname soll folgendermaßen aufgebaut sein: `[HDS-Nutzername]-CreateJob`. Als Laufzeit soll Python gewählt werden. Im Unterpunkt "Standard-Ausführungsrolle ändern" soll die Option "Verwenden einer vorhandenen Rolle" gewählt werden und die bestehende Rolle "MVS_Lambda_Role" gewählt werden.
 
@@ -12,7 +10,7 @@ Sind die Infos eingetragen, kann auf "Funktion erstellen" geklickt werden, um di
 
 ![Lambda Funktion erstellt](../assets/versuch3/lambda_createFunctionSuccess.png)
 
-### Auslöser hinzufügen
+## Auslöser hinzufügen
 
 Damit die Funktion beim Hinzufügen einer neuen Datei aufgerufen wird, muss ein Auslöser hinzugefügt werden. Dies kann über die Schaltfläche "Auslöser hinzufügen" oder im Reiter "Konfiguration -> Auslöser" geschehen.
 
@@ -32,9 +30,9 @@ Ist der Auslöser erstellt, wird er oben in der Übersicht angezeigt.
 !!! info
     Da es sich bei IMF-Paketen um ganze Ordner handelt, sind diese auch komplexer zu automatisieren. Um die grundlegenden Konzepte besser zu übermitteln, werden in diesem Versuch nur mp4-Dateien verwendet. Das gleiche lässt sich aber auch auf IMF-Pakete übertragen.
 
-### Code
+## Code
 
-!!! question "Frage 2"
+!!! question "Frage 3.2"
     Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird. 
     
     Fügen Sie den kommentierten Code entweder als .py-Datei der Abgabe hinzu oder integrieren Sie den Code als Bild oder Text in den Bericht.
@@ -105,7 +103,7 @@ Ist der Code hinzugefügt und modifiziert, kann die Lambdafunktion mithilfe des 
 
 ![Lambda Funktion Code](../assets/versuch3/lambda_code.png)
 
-### Weitere Einstellungen
+## Weitere Einstellungen
 
 Damit die Funktion reibungslos ablaufen kann, muss noch eine weitere Option geändert werden. Da die Erstellung des Auftrages und das Abrufen der Transcodiereinstellungen verhältnismäßig lang dauert, muss das Timeout der Funktion vergrößert werden. Das Timeout dient dazu, dass Funktionen sich nicht in Endlosschleifen verfangen und damit viel Geld kosten.
 
@@ -113,81 +111,4 @@ Im Reiter `Konfiguration -> Allgemeine Konfiguration` kann das Timeout geändert
 
 ![Lambda Funktion Timeout](../assets/versuch3/lambda_timeout.png)
 
-## Funktion 2: UploadFiles
 
-Die zweite Funktion soll bei neuen Dateien im Ordner `export/` die entsprechenden Dateien via FTP zu Akamai hochladen.
-
-Die Lambda Funktion soll wie bei der ersten Funktion erstellt werden. Der Name soll sich diesmal wie folgt zusammengesetzt werden: `[HDS-Nutzername]-UploadFile`. Als Laufzeit soll wieder Python gewählt werden. Ebenso soll die Standard-Ausführungsrolle wie bei Funktion 1 geändert werden.
-
-### Auslöser
-
-Als Auslöser soll diesmal "export/" eingetragen werden. Die Suffix-Filterung kann leer gelassen werden.
-
-![Lambda Funktion Code](../assets/versuch3/lambda_ausloeser2.png)
-
-### Code
-
-!!! question "Frage 3"
-    Versehen Sie den Code mit Kommentaren, die die einzelnen Abschnitte und Befehle beschreiben. Es muss nicht zu jedem Befehl ein Kommentar geschrieben werden, dokumentieren Sie den Code aber so, dass die Funktionsweise ersichtlich wird. 
-    
-    Fügen Sie den kommentierten Code entweder als .py-Datei der Abgabe hinzu oder integrieren Sie den Code als Bild oder Text in den Bericht.
-
-Im Nachfolgenden soll der Python-Code in die automatisch erstellte Datei "lambda_function.py" kopiert werden.
-
-```
-import json
-import os
-import json
-from ftplib import FTP
-import boto3
-
-FTP_HOST = 'mvs.ftp.upload.akamai.com'
-FTP_USER = 'musterstudent'
-FTP_PWD = 'xxxxxxxxxxxx'
-
-ftp = FTP(FTP_HOST, FTP_USER, FTP_PWD)
-
-s3_client = boto3.client('s3')
-
-def lambda_handler(event, context):
-
-    if event and event['Records']:
-        for record in event['Records']:
-            sourcebucket = record['s3']['bucket']['name']
-            sourcekey = record['s3']['object']['key']
-
-            ftp_path = sourcekey.replace("export/", "")
-            ftp_folder = ftp_path.rsplit('/', 1)
-
-            print(ftp_path)
-            
-            filename = os.path.basename(sourcekey)
-            download_path = '/tmp/'+ filename
-            print(download_path)
-            s3_client.download_file(sourcebucket, sourcekey, download_path)
-            
-            os.chdir("/tmp/")
-            with FTP(FTP_HOST, FTP_USER, FTP_PWD) as ftp, open(filename, 'rb') as file:
-                if directory_exists(ftp_folder[0]) is False: 
-                    ftp.mkd(ftp_folder[0])
-                ftp.cwd(ftp_folder[0])
-                ftp.storbinary(f'STOR {filename}', file)
-
-
-            os.remove(filename)
-
-# Check if directory exists (in current location)
-def directory_exists(dir):
-    filelist = []
-    ftp.retrlines('LIST',filelist.append)
-    for f in filelist:
-        if f.split()[-1] == dir and f.upper().startswith('D'):
-            return True
-    return False
-```
-
-In Zeile 7 bis 9 müssen die Login-Daten für den Akamai ftp Origin Server eingetragen werden.
-
-### Weitere Einstellungen
-
-Sollen große Dateien hochgeladen werden, ist es unter Umständen nötig, das Timeout zu vergrößern. Außerdem muss bei großen Dateien die Größe des flüchtigen Speichers erhöht werden. Bei den kleinen Transport-Stream Dateien ist dies jedoch nicht nötig.

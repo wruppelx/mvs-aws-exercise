@@ -1,6 +1,6 @@
 # Einleitung
 
-Video-on-Demand-Systeme (VoD) sind aus dem alltäglichen Leben nicht wegzudenken - Youtube, Netflix und die ARD/ZDF-Mediathek. Der Aufbau eines VoD-Systems in der Cloud ist in den letzten Jahren denkbar einfach geworden. Cloud-Anbieter wie Amazon Web Services (AWS) und Akamai bieten verschiedene Werkzeuge an, um Medien zu ingestieren, zu speichern, zu konvertieren und letztendlich zu verbreiten.
+Video-on-Demand-Systeme (VoD) sind aus dem alltäglichen Leben nicht wegzudenken - Youtube, Netflix und die ARD/ZDF-Mediathek. Der Aufbau eines VoD-Systems in der Cloud ist in den letzten Jahren denkbar einfach geworden. Cloud-Anbieter wie Amazon Web Services (AWS) und Fastly bieten verschiedene Werkzeuge an, um Medien zu ingestieren, zu speichern, zu konvertieren und letztendlich zu verbreiten.
 
 ## Workflow
 
@@ -27,10 +27,10 @@ Das Angebot kann man grob in 3 Bereiche unterteilen:
 
 - *Software as a Service (SaaS)* abstrahiert weiter und stellt reine Softwarelösungen wie Transcoder oder Benachrichtigungen zur Verfügung[^1]. 
 
-Einige Cloud-Anbieter sind *AWS*, *Microsoft Azure*, *Akamai* oder *Linode*.
+Einige Cloud-Anbieter sind *AWS*, *Microsoft Azure*, *Akamai* oder *Fastly*.
 
 !!! info
-    Für die folgenden Versuche werden die Plattformen von **AWS** für Speicherung, Monitoring und Transcodierung sowie das Content-Delivery-Network von **Akamai** benutzt.
+    Für die folgenden Versuche werden die Plattformen von **AWS** für Speicherung, Monitoring und Transcodierung sowie das Content-Delivery-Network von **Fastly** benutzt.
 
 !!! danger "Kosten"
 

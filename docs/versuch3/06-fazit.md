@@ -1,12 +1,12 @@
 # Fazit
 
-In Versuch 3 wurden die Grundprinzipien eines automatisieren Transcoding-Workflows erläutert und ein solcher in AWS erstellt. Sobald Rohmaterial ingestiert wurde, wurde dieses in HLS transcodiert und zum Origin-Server des CDNs hochgeladen.
+In Versuch 3 wurden die Grundprinzipien eines automatisieren Transcoding-Workflows erläutert und ein solcher in AWS erstellt. Sobald Rohmaterial ingestiert wurde, wurde dieses in HLS transcodiert und von AWS Mediaconvert im Origin-Ordner des CDNs abgelegt.
 
 ## Abgabe
 
 In der Abgabe sollte mindestens ein Beispiel für transcodierte Dateien mit der gegebenen Vorlage und ein Beispiel für transcodierte Dateien mit der eigenen Vorlage enthalten sein. **Dabei müssen nicht alle Dateien in die Abgabe eingefügt werden, sondern jeweils nur die Index-Dateien und ein Segment jeder Qualitätsstufe.**
 
-Außerdem können die Lambdafunktionen CreateJob und UploadFile als .py-Datei abgegeben werden, falls sie nicht als Screenshot oder Text im Bericht enthalten sind.
+Außerdem soll die Lambdafunktion CreateJob als .py-Datei abgegeben werden, falls sie nicht als Screenshot oder als Text im Bericht enthalten ist.
 
 ```
 📁 Versuch 3

@@ -3,7 +3,7 @@
 ## Test mit der erzeugten Transcodiervorlage
 Um die automatische Transcodierung zu testen, soll eine mp4-Datei aus dem S3-Bucket "a--sourcefiles" mithilfe der S3 Weboberfläche in den Ingestordner kopiert werden. Danach sollte automatisch ein neuer Transcodierauftrag bei MediaConvert gestartet werden.
 
-Nach der Transcodierung kann auf dem FTP-Server nachgesehen werden, ob die Inhalte automatisch hochgeladen wurden. Das Abspielen kann wie in Versuch 2 mithilfe des HLS-Players geschehen.
+Nach der Transcodierung kann im èxport-Unterordner nachgesehen werden, ob die Inhalte erstellt wurden. Das Abspielen kann wie in Versuch 2 mithilfe des HLS-Players geschehen.
 
 ## Status der Bearbeitung überprüfen
 Der Status der Ausführung der Lambda-Funktionen kann über den AWS-Service CloudWatch verfolgt werden. Dort sind auch mögliche Fehlermeldungen sichtbar.
@@ -21,7 +21,7 @@ Zuerst muss der Name der Vorlage gewählt werden. Hierbei soll wieder der eigene
 
 Nun können unter "Eingaben" und "Ausgabegruppen" wie gewohnt die Transcodierungseinstellungen festgelegt werden.
 
-!!! question "Frage 4"
+!!! question "Frage 3.4"
     Wählen Sie eigene Transcodierungs-Einstellungen. Probieren Sie andere Codecs, Bitraten, Seitenverhältnisse oder Farbkorrekturen aus. Dabei sollen die gewählten Parameter beispielsweise auf bestimmte Geräte wie das eigene Handy zugeschnitten sein oder anderweitig von den bisherigen Transcodierungseinstellungen abweichen. Dokumentieren Sie im Bericht Ihre Wahl.
 
 !!! info
