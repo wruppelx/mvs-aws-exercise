@@ -38,6 +38,30 @@ Bei der ersten Anmeldung muss das Passwort auf ein Nutzereigenes Passwort geänd
 
 ![AWS Password Ändern](../assets/versuch1/aws_password_change.png)
 
+### Access Key (Zugriffsschlüssel) erzeugen
+
+Im weiteren Verlauf der praktischen Übungen bennötigen Sie einen so genannten Access Key. Dieser ermöglicht den programmatischen Zugriff auf AWS-Ressourcen.
+
+Ein Access Key besteht aus zwei Komponenten: Der Access Key ID und dem Seceret Access Key.
+
+Erstellen Sie einen Access Key, indem Sie in der AWS-Konsole rechts oben auf Ihren Namen klicken und **Sicherheitsanmeldinformationen** (Security Credentials) auswählen.
+
+Wählen Sie anschließend **Zugriffsschlüssel erstellen**. (Die Fehlermeldungen in anderen Abschnitten dieser Seite bitte ignorieren.)
+
+Wählen Sie als Anwendungfall "Anwendung wird außerhalb ovn AWS ausgeführt":
+
+<img src="../assets/versuch1/iam_accesskey1.jpg" width=50% height=50%>
+
+
+Legen Sie den Schlüssel an.
+
+!!!info
+    Wichtig: Speichern Sie im letzten Schritt die `csv`-Datei mit dem Access Key im Klartext ab. 
+    Sie können anschließend in der AWS-Konsole nicht mehr auf diese Daten zugreifen!
+
+### Dashboard
+
+
 Das Dashboard ist der Startpunkt der AWS-Konsole und bietet die Möglichkeit, verschiedene Widgets anzuzeigen. Oben links lassen sich verschiedene Produkte und Services auswählen. Diese können ebenso über die Suchleiste gefunden werden. 
 
 ![AWS WebGUI](../assets/versuch1/aws_dashboard.png)
@@ -46,7 +70,7 @@ Das Dashboard ist der Startpunkt der AWS-Konsole und bietet die Möglichkeit, ve
 
 Oben rechts kann die Region, also der Standort des verwendeten Rechenzentrums, verändert werden. Für die Versuche ist die Nächstgelegende Region in diesem Fall *Frankfurt (`eu-central-1`)*, die sinnvollste.
 
-!!! question "Frage 1"
+!!! question "Frage 1.1"
     Eine Region beschreibt kein einzelnes Rechenzentrum. Recherchieren und erläutern Sie die Begriffe "Region" und "Availability Zone". Wie sind Regionen und Availability Zones miteinander verbunden?
 
 ![AWS Region Setting](../assets/versuch1/aws_region.png)

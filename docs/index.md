@@ -2,7 +2,7 @@
 
 ## Kurzfassung
 
-In dieser praktischen Übung zum Thema Cloud-Transcodierung soll ein grundlegendes Verständnis für cloudbasierte Transcodierung für Video-on-Demand-Systeme geschaffen werden. Außerdem sollen erste Praxiserfahrungen mit den Cloud-Anbietern AWS und Akamai vermittelt werden.
+In dieser praktischen Übung zum Thema Cloud-Transcodierung soll ein grundlegendes Verständnis für cloudbasierte Transcodierung für Video-on-Demand-Systeme geschaffen werden. Außerdem sollen erste Praxiserfahrungen mit den Cloud-Anbietern AWS und Fastly vermittelt werden.
 
 ### Versuche im Überblick
 
@@ -54,7 +54,7 @@ Zur Bewertung werden sowohl der Versuchsbericht, als auch die beantworteten Frag
 
 ## Benötigte Software
 
-Für die Versuche ist nur wenig Software auf dem lokalen Rechner von Nöten, da auf AWS und Akamai über ein Webinterface zugegriffen wird. Zur Beurteilung der Dateien sind jedoch einige Programme notwendig. 
+Für die Versuche ist nur wenig Software auf dem lokalen Rechner von Nöten, da auf AWS und Fastly über ein Webinterface zugegriffen wird. Zur Beurteilung der Dateien sind jedoch einige Programme notwendig. 
 
 Alle Programme sind sowohl für Windows und MacOS, als auch für diverse Linux-Distributionen erhältlich.
 

@@ -16,7 +16,7 @@ aws s3 ls
 
 Dabei ruft `aws` die AWS CLI auf, `s3` legt den Service, in diesem Fall AWS S3, fest und `ls` ist der auszuführende Befehl. Wie auch in Linux-Systemen steht `ls` für "list" und listet alle enthaltenen Elemente, in diesem Fall S3-Buckets auf.
 
-!!! question "Frage 1"
+!!! question "Frage 4.1"
     Führen Sie den oben angegebenen Befehl aus. Welche Buckets werden angezeigt. Dokumentieren Sie die Ausgabe mit einem Screenshot.
 
 ### Parameter
@@ -31,7 +31,7 @@ Bei diesem Befehl wird `cp`, also eine Kopieroperation, ausgeführt. Der S3-Pfad
 
 Um zu überprüfen, ob eine Datei in die CloudShell kopiert wurde, kann der Befehl `ls` in der CloudShell ausgeführt werden (ohne `aws s3` davor). Dieser Befehl listet die Dateien im aktuellen Pfad der CloudShell auf.
 
-!!! question "Frage 2"
+!!! question "Frage 4.2"
     Führen Sie den "cp"-Befehl mit der Option "--dryrun" aus. Führen Sie danach den Befehl ohne die "--dryrun"-Option aus. Dokumentieren Sie die Änderungen und kontrollieren sie mit `ls`, ob die Datei in das Dateisystem der CloudShell kopiert wurde.
 
 [^1]: [https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-commandstructure.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-commandstructure.html)
