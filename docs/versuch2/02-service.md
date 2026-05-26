@@ -70,7 +70,7 @@ Bitet speichern Sie den CDN Service mit `Save draft` zur weiteren Bearbeitung.
 
 
 
-## VCL Anpassung 1 von 3: Segmentiertes Caching aktivieren
+## Anpassung 1 von 3: Mit eineme VCL-Snippet segmentiertes Caching aktivieren
 
 Bei der Auslieferung großer Videodateien aus dem STACKIT Object Storage über Fastly stößt die Standardkonfiguration schnell an Grenzen. Für neue Fastly-Accounts dürfen Objekte ohne Zusatzfunktionen nur bis zu einer Größe von 20 MB im Cache gespeichert werden. Das verwendete Testvideo (testvideo.mp4) ist deutlich größer, weshalb ein normaler Cache-Zugriff zu einer Fehlermeldung („Response object too large“) führt.
 
@@ -110,7 +110,7 @@ if ((req.url.ext == "ts") || (req.url.ext == "mp4")) {
 
 Beenden Sie die Eingabe mit **Add**
 
-## VCL Anpassung 2 von 4: Zugriff auf Ihr AWS S3 Bucket einrichten
+## Anpassung 2 von 3: Mit eineme VCL-Snippet den Zugriff auf Ihr AWS S3 Bucket einrichten
 
 Ihr AWS S3 Bucket ist defaultmäßig gegen Zugriff aus dem Internet geschützt.
 Um Fastly den Zugriff zu ermöglichen muss eine weitere VCL-Anpassung vorgenommen werden.
@@ -133,7 +133,7 @@ Hinweis: Das ebenfalls dort beschriebene Snippet `Strip AWS response headers` bi
     Welchen Unterschied macht dies aus Sicherheitsgründen? Welche Kosten könnten entstehen?
 
 
-## Anpassung 3 von 3: 
+## Anpassung 3 von 3: Cross-origin resource sharing in den Einstellungen aktivieren
 
 Cross-origin resource sharing (CORS) ist für die Stream-Analyse mit einem HLS-Player erforderlic.
 

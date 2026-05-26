@@ -48,9 +48,9 @@ Erstellen Sie einen Access Key, indem Sie in der AWS-Konsole rechts oben auf Ihr
 
 Wählen Sie anschließend **Zugriffsschlüssel erstellen**. (Die Fehlermeldungen in anderen Abschnitten dieser Seite bitte ignorieren.)
 
-Wählen Sie als Anwendungfall "Anwendung wird außerhalb ovn AWS ausgeführt":
+Wählen Sie als Anwendungfall "Anwendung wird außerhalb von AWS ausgeführt":
 
-<img src="../../assets/versuch1/iam_accesskey1.jpg" onerror="this.onerror=null; this.src='../assets/versuch1/iam_accesskey1.jpg';">
+![IAM Access Key Config](../assets/versuch1/iam_accesskey1.jpg)
 
 
 Legen Sie den Schlüssel an.
