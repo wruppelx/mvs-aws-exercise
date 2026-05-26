@@ -3,8 +3,7 @@
 Das Ausführen einzelner Befehle kann manche Aufgaben im Gegensatz zur Weboberfläche vereinfachen. Die Möglichkeiten der Automation werden jedoch erst durch Scripte ausgereizt. Neben Bash bietet Python einen guten Einstieg in die Scriptsprachen und bietet im Gegensatz zu Bash mehr Möglichkeiten. 
 
 !!! info
-    Damit bei der Erstellung der Nutzer für diese Übung nicht 20 Nutzernamen händisch eingetragen werden müssen, wurde für diese Aufgabe ein Script erstellt, welches die teilnehmenden Studierenden einliest, Nutzer und Passwörter erstellt und die nötigen Berechtigungen vergibt. Durch ein Akamai Python-Paket erstellt dieses Script ebenso die Nutzer in Akamai.
-
+    Damit bei der Erstellung der Nutzer für diese Übung nicht 20 Nutzernamen händisch eingetragen werden müssen, wurde für diese Aufgabe ein Script erstellt, welches die teilnehmenden Studierenden einliest, Nutzer und Passwörter erstellt und die nötigen Berechtigungen vergibt. 
 Im Folgenden sollen die bestehenden Python-Scripts in den Lambda-Funktionen um zusätzliche Funktionen durch das AWS Python SDK erweitert werden.
 
 ## Automatische Warteschlangen-Auswahl
