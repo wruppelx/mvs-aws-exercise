@@ -21,8 +21,7 @@ geklickt.
 Füllen Sie die Felder in der unten gezeigten Maske aus, drücken Sie anschließend "Save draft" (noch nicht "Activate"!)
 Erläuterungen siehe unten.
 
-
-<img src="../../assets/versuch2/fastly-create-service1.jpg" width=50% height=50%>
+![Create service](../assets/versuch2/fastly-create-service1.jpg)
 
 ### Name your service
 
@@ -81,8 +80,7 @@ Segmented Caching ist standardmäßig nicht aktiv und muss gezielt konfiguriert 
 
 Navigieren Sie unter **Service configuration** /  **LOGGING** zu dem Reiter Snippets
 
-
-<img src="../../assets/versuch2/fastly-vcl-snippets.jpg" width=50% height=50%>
+![VCL Snippets](../assets/versuch2/fastly-vcl-snippets.jpg)
 
 Klicken Sie **Add a VCL snippet**
 
@@ -106,11 +104,9 @@ if ((req.url.ext == "ts") || (req.url.ext == "mp4")) {
 ```
 
 !!! question "Frage 2.1"
-    Erläutern Sie den obenstehenden Code. Erläutern Sie auch, was Segmented Caching ist.
+    Erläutern Sie die Auswirkungen des obenstehenden Codes. Erläutern Sie auch, was Segmented Caching ist.
 
-
-<img src="../../assets/versuch2/fastly-settings-vcl.jpg" width=50% height=50%>
-
+![VCL settings](../assets/versuch2/fastly-settings-vcl.jpg)
 
 Beenden Sie die Eingabe mit **Add**
 
