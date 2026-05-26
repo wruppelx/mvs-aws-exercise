@@ -7,9 +7,7 @@ Die Inhalte sind nun über das CDN erreichbar. Der HLS-Stream kann damit öffent
 Zum Testen der HLS-Funktionalität soll die Demo-Instanz von hls.js genutzt werden. hls.js ist eine quelloffene JavaScript Bibliothek, die HLS-Streams im Browser wiedergeben kann. Der Demoplayer ist unter [https://hlsjs.video-dev.org/demo/](https://hlsjs.video-dev.org/demo/) zu finden.
 
 !!! warning "Kompatibilität"
-    Auf meinem Mac konnte die Seite via Safari zwar geladen werden, das Video konnte aber nicht gestartet werden. Auf anderen HLS-Playern trat das gleiche Problem auf. Über den Firefox Browser funktionierte es jedoch problemlos.
-
-    Sollten auch bei Ihnen Probleme auftreten löst ein andere Browser unter Umständen das Problem.
+    hls.js hat in der Vergangenheit auf Chrome (siehe Anleitung weiter unten), Edge und Safari funktioniert, auf Firefox gelegentlich nicht. Bitte testen Sie bei Problemen einen anderen Browser.
 
 
 ![hls.js](../assets/versuch2/hls_js.png)
