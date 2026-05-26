@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="80px"
+   height="80px"
+   viewBox="0 0 80 80"
+   version="1.1"
+   id="svg333"
+   sodipodi:docname="aws_cloudshell.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview335"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.8375"
+     inkscape:cx="34.547225"
+     inkscape:cy="40.038948"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="1072"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="use2" />
+  <title
+     id="title318">Icon-Architecture/64/Arch_AWS-CloudShell_64</title>
+  <defs
+     id="defs325">
+    <linearGradient
+       x1="0%"
+       y1="100%"
+       x2="100%"
+       y2="0%"
+       id="linearGradient-1">
+      <stop
+         stop-color="#2E27AD"
+         offset="0%"
+         id="stop320" />
+      <stop
+         stop-color="#527FFF"
+         offset="100%"
+         id="stop322" />
+    </linearGradient>
+  </defs>
+  <g
+     id="use2"
+     transform="matrix(0.875,0,0,0.875,10,5)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.14286"
+       id="rect630"
+       width="91.428574"
+       height="91.428574"
+       x="-11.428572"
+       y="-5.7142859"
+       inkscape:label="rect630"
+       inkscape:highlight-color="#00aaff" />
+    <g
+       stroke="none"
+       id="g513">
+      <path
+         d="M 34.936,78.782 68.909,59.348 V 20.577 l -33.973,19.38 z"
+         id="path489"
+         style="fill:#ffffff" />
+      <path
+         d="m 1.028,59.337 33.93,19.402 V 39.968 L 1.028,20.609 Z M 68.673,20.577 34.958,1.337 1.242,20.577 34.958,39.85 68.674,20.578 Z"
+         id="path491"
+         style="fill:#ffffff" />
+      <path
+         d="M 34.957,38.707 66.714,20.599 66.682,20.578 34.957,38.708 v 0 z"
+         id="path493" />
+      <path
+         d="M 3.232,20.577 3.2,20.598 34.957,38.706 v 0 z"
+         id="path495" />
+      <path
+         d="M 34.957,38.707 Z"
+         id="path497" />
+      <path
+         d="M 68.844,19.337 34.957,0 1.07,19.337 0,19.973 V 59.984 L 33.93,79.386 35,80 36.07,79.386 70,59.984 V 19.962 Z M 67.774,58.733 36.028,76.907 V 40.582 L 67.817,22.441 Z M 33.887,76.907 2.098,58.723 V 22.441 L 33.887,40.582 Z M 3.232,20.598 34.957,2.479 66.682,20.598 v 0 L 34.957,38.707 v 0 L 3.2,20.598 Z"
+         fill="#444444"
+         id="path499" />
+      <path
+         d="M 35.096,60.9 53.345,50.477 V 29.663 L 35.096,40.075 Z M 16.569,50.477 34.818,60.9 V 40.075 L 16.569,29.663 Z M 53.153,29.383 34.957,19.003 16.761,29.383 34.957,39.795 Z"
+         fill="#ffd44f"
+         id="path501" />
+      <g
+         fill="#96bf3d"
+         id="g509">
+        <path
+           d="M 34.957,38.739 51.323,29.405 51.302,29.384 34.958,38.729 V 38.74 Z"
+           id="path503" />
+        <path
+           d="m 18.613,29.383 -0.021,0.021 16.365,9.334 V 38.727 L 18.613,29.382 Z"
+           id="path505" />
+        <path
+           d="M 34.957,38.728 Z"
+           id="path507" />
+      </g>
+      <path
+         d="M 53.474,28.143 34.957,17.591 16.44,28.143 15.37,28.768 v 22.431 l 18.517,10.596 1.07,0.614 1.07,-0.614 18.538,-10.596 v -22.43 z m -1.07,21.795 -16.376,9.378 V 40.604 L 52.426,31.248 Z M 33.887,59.316 17.49,49.938 v -18.69 l 16.397,9.356 z M 18.613,29.383 34.957,20.07 51.301,29.394 v 0 l -16.344,9.334 v 0 L 18.592,29.404 Z"
+         id="path511"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>
