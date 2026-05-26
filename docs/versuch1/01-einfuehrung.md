@@ -50,7 +50,7 @@ Wählen Sie anschließend **Zugriffsschlüssel erstellen**. (Die Fehlermeldungen
 
 Wählen Sie als Anwendungfall "Anwendung wird außerhalb ovn AWS ausgeführt":
 
-<img src="../../assets/versuch1/iam_accesskey1.jpg" width=50% height=50%>
+<img src="../../assets/versuch1/iam_accesskey1.jpg" onerror="this.onerror=null; this.src='../assets/versuch1/iam_accesskey1.jpg';">
 
 
 Legen Sie den Schlüssel an.
