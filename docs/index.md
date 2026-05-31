@@ -22,8 +22,12 @@ Die Fragen sind in der Versuchsanleitung folgendermaßen gekennzeichnet:
 !!! question "Beispielfrage 1"
     Beispiel-Fragestellung.
 
+{==
+
 ** Mittels KI generierte Teile der Abgabe sind zu kennzeichnen, das verwendete LLM und der jeweilige Prompt sind anzugeben. 
 Verstöße gegen die Kennzeichnungspflicht führen zur Bewertung der praktischen Übung mit null Punkten**
+
+==}
 
 
 ### Abgabeort
@@ -32,7 +36,7 @@ Die Abgabe des Versuchsberichtes erfolgt via ILIAS. Der Versuchsbericht soll nac
 
 `[Matrikelnummer] - [Nachname]_[Vorname] - Versuchsbericht.pdf`
 
-Die abzugebenden Dateien sollen in Ihr S3-Bucket hochgeladen werden. Pro Versuch soll für die Abgaben ein eigener Ordner erstellt werden. 
+Die abzugebenden Dateien sollen in Ihr S3-Bucket hochgeladen werden. Pro Versuch soll für die Abgaben ein eigener Ordner Versuch1, Versuch2 etc. erstellt werden. 
 
 Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werden müssen. Eigene Experimente mit z.B. kreativen Kodiereinstellungen etc. sind erwünscht. Wenn weitere Dateien auf S3 verbleiben, kopieren Sie diese bitte in einen Unterordner "Experimente".
 
@@ -40,13 +44,13 @@ Im Fazit jedes Kapitels sind die Dateien genannt, die mindestens abgegeben werde
 
 ```
 📁 
-    📁 Versuch 1
+    📁 Versuch1
         📄 Clip1_720p.mp4
         ...
-    📁 Versuch 2
-    📁 Versuch 3
-    📁 Versuch 4
-    📁 Versuch 5
+    📁 Versuch2
+    📁 Versuch3
+    📁 Versuch4
+    📁 Versuch5
 ```
 
 !!! warning "Warnung"
