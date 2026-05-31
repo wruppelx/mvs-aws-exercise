@@ -22,6 +22,10 @@ Die Fragen sind in der Versuchsanleitung folgendermaßen gekennzeichnet:
 !!! question "Beispielfrage 1"
     Beispiel-Fragestellung.
 
+** Mittels KI generierte Teile der Abgabe sind zu kennzeichnen, das verwendete LLM und der jeweilige Prompt sind anzugeben. 
+Verstöße gegen die Kennzeichnungspflicht führen zur Bewertung der praktischen Übung mit null Punkten**
+
+
 ### Abgabeort
 
 Die Abgabe des Versuchsberichtes erfolgt via ILIAS. Der Versuchsbericht soll nach dem folgenden Schema benannt sein: 

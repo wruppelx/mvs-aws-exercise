@@ -27,7 +27,7 @@ Das Angebot kann man grob in 3 Bereiche unterteilen:
 
 - *Software as a Service (SaaS)* abstrahiert weiter und stellt reine Softwarelösungen wie Transcoder oder Benachrichtigungen zur Verfügung[^1]. 
 
-Einige Cloud-Anbieter sind *AWS*, *Microsoft Azure*, *Akamai* oder *Fastly*.
+Cloud-Anbieter sind zum Beispiel *AWS*, *Microsoft Azure*, *STACKIT*, *Akamai* oder *Fastly*.
 
 !!! info
     Für die folgenden Versuche werden die Plattformen von **AWS** für Speicherung, Monitoring und Transcodierung sowie das Content-Delivery-Network von **Fastly** benutzt.
