@@ -26,7 +26,7 @@ Erläuterungen siehe unten.
 ### Name your service
 
 In diesem Feld wird der Name des Services festgelegt.  
-Als Name soll der **HDS-Nutzername also der Name mit dem Sie sich bei StudIP auch anmelden** verwendet werden (z. B. `lelugoue`).
+Als Name soll der **HDS-Nutzername, also der Name mit dem Sie sich bei StudIP auch anmelden**, verwendet werden (z. B. `lelugoue`).
 
 Der Name dient ausschließlich der internen Zuordnung und hat keinen Einfluss
 auf die später verwendete Domain.
@@ -66,11 +66,11 @@ mvs-[HDS-Nutzername].s3.eu-central-1.amazonaws.com
 ```
 
 ### Save draft 
-Bitet speichern Sie den CDN Service mit `Save draft` zur weiteren Bearbeitung.
+Bitte speichern Sie den CDN Service mit `Save draft` zur weiteren Bearbeitung.
 
 
 
-## Anpassung 1 von 3: Mit eineme VCL-Snippet segmentiertes Caching aktivieren
+## Anpassung 1 von 3: Mit einem VCL-Snippet segmentiertes Caching aktivieren
 
 Bei der Auslieferung großer Videodateien aus dem STACKIT Object Storage über Fastly stößt die Standardkonfiguration schnell an Grenzen. Für neue Fastly-Accounts dürfen Objekte ohne Zusatzfunktionen nur bis zu einer Größe von 20 MB im Cache gespeichert werden. Das verwendete Testvideo (testvideo.mp4) ist deutlich größer, weshalb ein normaler Cache-Zugriff zu einer Fehlermeldung („Response object too large“) führt.
 
@@ -80,7 +80,7 @@ Segmented Caching ist standardmäßig nicht aktiv und muss gezielt konfiguriert 
 
 Navigieren Sie unter **Service configuration** /  **LOGGING** zu dem Reiter Snippets
 
-![VCL Snippets](../assets/versuch2/fastly-vcl-snippets.jpg)
+![VCL-Snippets](../assets/versuch2/fastly-vcl-snippets.jpg)
 
 Klicken Sie **Add a VCL snippet**
 
@@ -105,6 +105,7 @@ if ((req.url.ext == "ts") || (req.url.ext == "mp4")) {
 
 !!! question "Frage 2.1"
     Erläutern Sie die Auswirkungen des obenstehenden Codes. Erläutern Sie auch, was Segmented Caching ist.
+    Erläutern Sie auch, was VCL ist.
 
 ![VCL settings](../assets/versuch2/fastly-settings-vcl.jpg)
 
@@ -116,7 +117,7 @@ Ihr AWS S3 Bucket ist defaultmäßig gegen Zugriff aus dem Internet geschützt.
 Um Fastly den Zugriff zu ermöglichen muss eine weitere VCL-Anpassung vorgenommen werden.
 Folgen Sie dazu der Anleitung unter
 
-https://www.fastly.com/documentation/guides/integrations/non-fastly-services/amazon-s3/#using-an-amazon-s3-private-bucket 
+[Using an AWS S3 Private Bucket with Fastly](https://www.fastly.com/documentation/guides/integrations/non-fastly-services/amazon-s3/#using-an-amazon-s3-private-bucket) 
 
 
 Legen Sie wie dort beschrieben ein Snippet in der Subroutine `miss` an.
@@ -139,13 +140,13 @@ Cross-origin resource sharing (CORS) ist für die Stream-Analyse mit einem HLS-P
 
 Aktivieren Sie CORS in den Einstellungen Ihres Service wie im folgenden beschrieben:
 
-https://www.fastly.com/documentation/guides/full-site-delivery/headers/enabling-cross-origin-resource-sharing/
+[Enabling CORS](https://www.fastly.com/documentation/guides/full-site-delivery/headers/enabling-cross-origin-resource-sharing/)
 
 Übernehmen Sie dabei alle Einstellungen wie unter "5. Create header" beschrieben.
 
 ## Aktivierung
 
-Überprüfen Sie, ob beide VCL snippets angelegt wurden.
+Überprüfen Sie, ob beide VCL-Snippets angelegt wurden.
 
 
 Aktivieren Sie dann Ihren CDN Service durch Klicken auf **Activate**.
