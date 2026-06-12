@@ -93,7 +93,9 @@ Der Bereich "A records" zeigt die IPv4 Adressen des Hostnamen an und der Bereich
     Führen Sie eine GeoIP Abfrage durch. In welchem Land befinden sich die angezeigten IPs?
 
 !!! question "Frage 2.8"
-    Welche Bedeutung haben die CNAME-Werte neben den IPv4 und IPv6 Adressen? Beschreiben Sie, was CNAME ist und welche Rolle es in CDNs spielt.
+(herausgenommen)
+#    Welche Bedeutung haben die CNAME-Werte neben den IPv4 und IPv6 Adressen? Beschreiben #Sie, was CNAME ist und welche Rolle es in CDNs spielt.
+#
 
 #### Lokale DNS
 
@@ -102,4 +104,6 @@ Klicken Sie nun auf den Reiter "Local DNS" und wählen Sie Südafrika aus. Nun w
 ![nslookup-io records](../assets/versuch2/nslookup-io_suedafrika.png)
 
 !!! question "Frage 2.9"
-    Führen Sie eine GeoIP Abfrage durch. In welchem Land befinden sich die angezeigten IP? Was bedeutet dies für den Abruf des HLS-Streams aus Südafrika?
+    Führen Sie für die nun angezeigt IP-Adresse(n) ebenfalls eine GeoIP Abfrage durch. 
+    
+    In welchem Land befinden sich die angezeigten IP? Was bedeutet dies für den Abruf des HLS-Streams aus Südafrika?
