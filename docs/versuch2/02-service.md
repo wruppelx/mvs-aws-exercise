@@ -130,8 +130,10 @@ Hinweis: Das ebenfalls dort beschriebene Snippet `Strip AWS response headers` bi
 
 !!! question "Frage 2.2"
     Sie könnten alternativ Ihr S3 Bucket auch über eine AWS-Policy öffentlich zugänglich machen. 
+    
     Die obige Konfiguration der Zugangsdaten in Fastly zum Zugriff auf die Origin-Daten wäre dann nicht erforderlich.
-    Welchen Unterschied macht dies aus Sicherheitsgründen? Welche Kosten könnten entstehen?
+
+    Welchen Unterschied macht dies unter Sicherheitsgesichtspunkten Welche Kosten könnten entstehen?
 
 
 ## Anpassung 3 von 3: Cross-origin resource sharing in den Einstellungen aktivieren
